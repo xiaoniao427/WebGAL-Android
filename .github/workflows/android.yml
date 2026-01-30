@@ -11,7 +11,6 @@ on:
       - '**/CMakeLists.txt'
       - '**/Android.mk'
       - '**/Application.mk'
-      - '**/ndk-build.gradle'
   pull_request:
     branches:
       - main
@@ -25,7 +24,6 @@ on:
         options:
           - Debug
           - Release
-          - RelWithDebInfo
       abi:
         description: '目标架构'
         required: false
@@ -44,11 +42,6 @@ on:
         description: 'Android NDK版本'
         required: false
         default: '25.2.9519653'
-        type: string
-      cmake_version:
-        description: 'CMake版本'
-        required: false
-        default: '3.22.1'
         type: string
 
 env:
@@ -71,8 +64,43 @@ jobs:
           fi
           echo "Selected ABIs: ${{ steps.set-abis.outputs.abi_list }}"
 
+  find-cmake:
+    runs-on: ubuntu-latest
+    outputs:
+      cmake_dir: ${{ steps.find-cmake-file.outputs.cmake_dir }}
+      has_cmake: ${{ steps.find-cmake-file.outputs.has_cmake }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Find CMakeLists.txt
+        id: find-cmake-file
+        run: |
+          # 查找项目中所有的 CMakeLists.txt 文件
+          echo "Searching for CMakeLists.txt files..."
+          find . -name "CMakeLists.txt" -type f | head -10
+          
+          # 检查常见的 Android 原生代码位置
+          if [ -f "./app/src/main/cpp/CMakeLists.txt" ]; then
+            echo "Found CMakeLists.txt in app/src/main/cpp/"
+            echo "cmake_dir=./app/src/main/cpp" >> $GITHUB_OUTPUT
+            echo "has_cmake=true" >> $GITHUB_OUTPUT
+          elif [ -f "./src/main/cpp/CMakeLists.txt" ]; then
+            echo "Found CMakeLists.txt in src/main/cpp/"
+            echo "cmake_dir=./src/main/cpp" >> $GITHUB_OUTPUT
+            echo "has_cmake=true" >> $GITHUB_OUTPUT
+          elif [ -f "./CMakeLists.txt" ]; then
+            echo "Found CMakeLists.txt in root directory"
+            echo "cmake_dir=./" >> $GITHUB_OUTPUT
+            echo "has_cmake=true" >> $GITHUB_OUTPUT
+          else
+            echo "No CMakeLists.txt found"
+            echo "has_cmake=false" >> $GITHUB_OUTPUT
+          fi
+
   build-native:
-    needs: setup
+    needs: [setup, find-cmake]
+    if: needs.find-cmake.outputs.has_cmake == 'true'
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -81,12 +109,11 @@ jobs:
       BUILD_TYPE: ${{ github.event.inputs.build_type || 'Release' }}
       NDK_VERSION: ${{ github.event.inputs.ndk_version || '25.2.9519653' }}
       ANDROID_PLATFORM: android-24
+      CMAKE_DIR: ${{ needs.find-cmake.outputs.cmake_dir || '.' }}
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        submodules: true
 
     - name: Setup Java
       uses: actions/setup-java@v4
@@ -99,11 +126,6 @@ jobs:
       with:
         ndk-version: ${{ env.NDK_VERSION }}
 
-    - name: Setup CMake
-      uses: jwlawson/actions-setup-cmake@v1.14
-      with:
-        cmake-version: ${{ github.event.inputs.cmake_version || '3.22.1' }}
-
     - name: Setup build environment
       id: setup-env
       run: |
@@ -111,22 +133,47 @@ jobs:
         ANDROID_NDK_ROOT="$ANDROID_SDK_ROOT/ndk/${{ env.NDK_VERSION }}"
         echo "ANDROID_NDK_ROOT=$ANDROID_NDK_ROOT" >> $GITHUB_ENV
         echo "ANDROID_NDK_HOME=$ANDROID_NDK_ROOT" >> $GITHUB_ENV
-        echo "PATH=$ANDROID_NDK_ROOT:$PATH" >> $GITHUB_ENV
         
         echo "Building for ABI: ${{ matrix.abi }}"
         echo "Build type: ${{ env.BUILD_TYPE }}"
-        echo "NDK path: $ANDROID_NDK_ROOT"
+        echo "CMake directory: ${{ env.CMAKE_DIR }}"
         echo "NDK version: ${{ env.NDK_VERSION }}"
 
     - name: Create build directory
       run: |
         mkdir -p build/android/${{ matrix.abi }}
-        ls -la
+        echo "Build directory created at: build/android/${{ matrix.abi }}"
+
+    - name: Check if CMakeLists.txt exists
+      run: |
+        echo "Checking for CMakeLists.txt in: ${{ env.CMAKE_DIR }}"
+        if [ -f "${{ env.CMAKE_DIR }}/CMakeLists.txt" ]; then
+          echo "✅ CMakeLists.txt found"
+          ls -la "${{ env.CMAKE_DIR }}/"
+        else
+          echo "❌ CMakeLists.txt not found in ${{ env.CMAKE_DIR }}"
+          echo "Available files:"
+          ls -la "${{ env.CMAKE_DIR }}/" || true
+          exit 1
+        fi
 
     - name: Configure CMake for Android
       working-directory: build/android/${{ matrix.abi }}
       run: |
-        cmake ../../.. \
+        echo "Current directory: $(pwd)"
+        echo "Source directory: ${{ env.CMAKE_DIR }}"
+        
+        # 使用绝对路径
+        SOURCE_DIR="$GITHUB_WORKSPACE/${{ env.CMAKE_DIR }}"
+        echo "Absolute source directory: $SOURCE_DIR"
+        
+        # 检查 CMakeLists.txt
+        if [ ! -f "$SOURCE_DIR/CMakeLists.txt" ]; then
+          echo "Error: CMakeLists.txt not found at $SOURCE_DIR/CMakeLists.txt"
+          exit 1
+        fi
+        
+        cmake "$SOURCE_DIR" \
           -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_ROOT/build/cmake/android.toolchain.cmake \
           -DANDROID_ABI=${{ matrix.abi }} \
           -DANDROID_PLATFORM=${{ env.ANDROID_PLATFORM }} \
@@ -175,8 +222,8 @@ jobs:
           echo "---"
         done 2>/dev/null || echo "No libraries found for verification"
 
-  combine-and-package:
-    needs: build-native
+  build-apk-with-native:
+    needs: [setup, build-native]
     if: |
       github.event_name == 'push' || 
       github.event_name == 'workflow_dispatch'
@@ -188,74 +235,99 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Download all native artifacts
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: ${{ github.event.inputs.java_version || '21' }}
+        cache: gradle
+
+    - name: Setup Android SDK and NDK
+      uses: android-actions/setup-android@v3
+      with:
+        ndk-version: ${{ github.event.inputs.ndk_version || '25.2.9519653' }}
+
+    - name: Download built native libraries
       uses: actions/download-artifact@v4
       with:
-        path: artifacts
+        path: downloaded-libs
 
-    - name: Create combined package
+    - name: Copy native libraries to jniLibs
       run: |
-        echo "Creating combined package for all ABIs..."
-        mkdir -p dist/android
+        echo "Copying native libraries to jniLibs directory..."
+        mkdir -p app/src/main/jniLibs
         
-        # 组织库文件
-        for artifact in artifacts/*; do
+        # 遍历下载的库文件
+        for artifact in downloaded-libs/*; do
           if [ -d "$artifact" ]; then
             artifact_name=$(basename "$artifact")
             if [[ "$artifact_name" =~ native-libs-(arm64-v8a|armeabi-v7a)- ]]; then
               abi_type=$(echo "$artifact_name" | grep -oE '(arm64-v8a|armeabi-v7a)')
-              echo "Processing $abi_type libraries..."
-              mkdir -p "dist/android/libs/$abi_type"
-              find "$artifact" -name "*.so" -exec cp {} "dist/android/libs/$abi_type/" \; 2>/dev/null || true
-              find "$artifact" -name "*.a" -exec cp {} "dist/android/libs/$abi_type/" \; 2>/dev/null || true
+              echo "Copying $abi_type libraries..."
+              mkdir -p "app/src/main/jniLibs/$abi_type"
+              find "$artifact" -name "*.so" -exec cp {} "app/src/main/jniLibs/$abi_type/" \; 2>/dev/null || true
             fi
           fi
         done
         
-        echo "Package structure:"
-        find dist/android -type f | sort || echo "No files found"
+        echo "jniLibs structure:"
+        find app/src/main/jniLibs -type f | sort || echo "No jniLibs files found"
 
-    - name: Create README
-      run: |
-        cat > dist/android/README.md << EOF
-        # Android Native Libraries
-        
-        ## Build Information
-        - Build Date: $(date)
-        - Commit: ${{ github.sha }}
-        - Build Type: ${{ env.BUILD_TYPE }}
-        - Trigger: ${{ github.event_name }}
-        
-        ## Included ABIs
-        $(for dir in dist/android/libs/* 2>/dev/null; do echo "- $(basename $dir)"; done)
-        
-        ## Usage
-        1. Copy the .so files to your Android project's \`jniLibs\` directory
-        2. Ensure your \`build.gradle\` includes the appropriate ABI filters
-        EOF
+    - name: Make gradlew executable
+      run: chmod +x gradlew
 
-    - name: Package all libraries
+    - name: Build APK with native libraries
       run: |
-        cd dist/android
-        if ls libs/*/*.so 1>/dev/null 2>&1 || ls libs/*/*.a 1>/dev/null 2>&1; then
-          tar -czf android-native-libs-${{ github.sha_short }}-${{ env.BUILD_TYPE }}.tar.gz .
-          echo "Package created: android-native-libs-${{ github.sha_short }}-${{ env.BUILD_TYPE }}.tar.gz"
-          ls -lh *.tar.gz
+        echo "Building APK with native libraries..."
+        
+        if [ "${{ env.BUILD_TYPE }}" = "Debug" ]; then
+          ./gradlew clean assembleDebug --stacktrace
         else
-          echo "No libraries found to package"
+          ./gradlew clean assembleRelease --stacktrace
+        fi
+
+    - name: Verify APK exists
+      run: |
+        if [ "${{ env.BUILD_TYPE }}" = "Debug" ]; then
+          APK_PATH="app/build/outputs/apk/debug/app-debug.apk"
+        else
+          APK_PATH="app/build/outputs/apk/release/app-release-unsigned.apk"
+        fi
+        
+        if [ -f "$APK_PATH" ]; then
+          echo "✅ APK built successfully: $APK_PATH"
+          echo "APK size: $(du -h "$APK_PATH" | cut -f1)"
+          # 检查 APK 是否包含原生库
+          echo "Checking for native libraries in APK..."
+          unzip -l "$APK_PATH" | grep "\.so" | head -10 || echo "No .so files found in APK"
+        else
+          echo "❌ APK not found at: $APK_PATH"
+          echo "Available APK files:"
+          find app/build -name "*.apk" -type f 2>/dev/null || true
           exit 1
         fi
 
-    - name: Upload combined package
-      if: success()
+    - name: Rename and upload APK
+      run: |
+        if [ "${{ env.BUILD_TYPE }}" = "Debug" ]; then
+          cp app/build/outputs/apk/debug/app-debug.apk webgal-with-native-${{ github.sha_short }}-debug.apk
+          APK_NAME="webgal-with-native-debug.apk"
+        else
+          cp app/build/outputs/apk/release/app-release-unsigned.apk webgal-with-native-${{ github.sha_short }}-release.apk
+          APK_NAME="webgal-with-native-release.apk"
+        fi
+        
+        echo "Renamed APK to: $APK_NAME"
+
+    - name: Upload APK artifact
       uses: actions/upload-artifact@v4
       with:
-        name: android-native-libs-combined-${{ env.BUILD_TYPE }}
-        path: dist/android/*.tar.gz
+        name: ${{ env.BUILD_TYPE }}-apk-with-native
+        path: webgal-with-native-*.apk
         retention-days: 30
 
   create-release:
-    needs: combine-and-package
+    needs: [build-apk-with-native, build-native]
     if: |
       (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
       (github.event_name == 'workflow_dispatch')
@@ -265,11 +337,17 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Download combined package
+    - name: Download APK artifact
       uses: actions/download-artifact@v4
       with:
-        name: android-native-libs-combined-${{ github.event.inputs.build_type || 'Release' }}
-        path: release
+        name: ${{ github.event.inputs.build_type || 'Release' }}-apk-with-native
+        path: release-apk
+
+    - name: Download native libraries
+      uses: actions/download-artifact@v4
+      with:
+        path: release-libs
+        pattern: native-libs-*
 
     - name: Create version tag
       id: create_tag
@@ -278,7 +356,7 @@ jobs:
         TIMESTAMP=$(date +%Y%m%d-%H%M%S)
         BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
         echo "TAG_NAME=native-v${TIMESTAMP}-${BUILD_TYPE}-${SHORT_SHA}" >> $GITHUB_OUTPUT
-        echo "RELEASE_NAME=Android Native Libraries ${TIMESTAMP} (${BUILD_TYPE})" >> $GITHUB_OUTPUT
+        echo "RELEASE_NAME=WebGAL Android with Native ${TIMESTAMP} (${BUILD_TYPE})" >> $GITHUB_OUTPUT
 
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v2
@@ -290,9 +368,10 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          release/*.tar.gz
+          release-apk/*.apk
+          release-libs/**/*.so
         body: |
-          ## Android Native Libraries 构建
+          ## WebGAL Android with Native Libraries 构建
           
           **构建信息：**
           - 构建时间：$(date -u +"%Y-%m-%d %H:%M:%S UTC")
@@ -300,24 +379,21 @@ jobs:
           - 触发方式：${{ github.event_name }}
           - 构建类型：${{ github.event.inputs.build_type || 'Release' }}
           
+          **包含内容：**
+          - APK 文件（已包含原生库）
+          - 单独的原生库文件 (.so)
+          
           **支持的架构：**
           ${{ fromJSON(needs.setup.outputs.abi_list) }}
           
-          **包含的文件：**
-          - 动态链接库 (.so 文件)
-          - 静态链接库 (.a 文件，如果存在)
-          
           **使用说明：**
-          将对应架构的 .so 文件复制到 Android 项目的以下目录：
-          ```
-          app/src/main/jniLibs/arm64-v8a/*.so
-          app/src/main/jniLibs/armeabi-v7a/*.so
-          ```
+          1. APK 文件可直接安装使用
+          2. 原生库文件可用于其他项目集成
 
     - name: Build summary
       run: |
         echo "========================================"
-        echo "          🎉 原生库构建完成！"
+        echo "          🎉 Android 原生构建完成！"
         echo "========================================"
         echo ""
         echo "📋 构建详情："
@@ -326,12 +402,35 @@ jobs:
         echo "📱 目标架构: ${{ fromJSON(needs.setup.outputs.abi_list) }}"
         echo "☕ Java版本: ${{ github.event.inputs.java_version || '21' }}"
         echo "🛠️  NDK版本: ${{ github.event.inputs.ndk_version || '25.2.9519653' }}"
-        echo "⚙️  CMake版本: ${{ github.event.inputs.cmake_version || '3.22.1' }}"
         echo ""
         echo "✅ 构建结果："
         echo "----------------------------------------"
-        echo "- Release: 已创建"
+        echo "- Native Libraries: ✅ 已构建"
+        echo "- APK with Native: ✅ 已构建"
+        echo "- Release: ✅ 已创建"
         echo "- Tag: ${{ steps.create_tag.outputs.TAG_NAME }}"
         echo ""
         echo "🔗 Release URL: https://github.com/${{ github.repository }}/releases/tag/${{ steps.create_tag.outputs.TAG_NAME }}"
         echo "========================================"
+
+  no-cmake-found:
+    needs: find-cmake
+    if: needs.find-cmake.outputs.has_cmake == 'false'
+    runs-on: ubuntu-latest
+    steps:
+      - name: No CMakeLists.txt found
+        run: |
+          echo "❌ 未找到 CMakeLists.txt 文件"
+          echo ""
+          echo "您的项目需要包含 CMakeLists.txt 文件才能构建原生库。"
+          echo ""
+          echo "请检查以下位置："
+          echo "1. 项目根目录"
+          echo "2. app/src/main/cpp/"
+          echo "3. src/main/cpp/"
+          echo ""
+          echo "如果没有 CMakeLists.txt，您需要："
+          echo "1. 创建原生代码目录结构"
+          echo "2. 编写 CMakeLists.txt"
+          echo "3. 配置 build.gradle 使用 CMake"
+          exit 1
