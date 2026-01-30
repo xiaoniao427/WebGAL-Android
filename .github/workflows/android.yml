@@ -1,0 +1,337 @@
+name: Android Native Build - v8 and v7
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.cpp'
+      - '**/*.c'
+      - '**/*.h'
+      - '**/CMakeLists.txt'
+      - '**/Android.mk'
+      - '**/Application.mk'
+      - '**/ndk-build.gradle'
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: '构建类型'
+        required: false
+        default: 'Release'
+        type: choice
+        options:
+          - Debug
+          - Release
+          - RelWithDebInfo
+      abi:
+        description: '目标架构'
+        required: false
+        default: 'both'
+        type: choice
+        options:
+          - arm64-v8a
+          - armeabi-v7a
+          - both
+      java_version:
+        description: 'Java版本'
+        required: false
+        default: '21'
+        type: string
+      ndk_version:
+        description: 'Android NDK版本'
+        required: false
+        default: '25.2.9519653'
+        type: string
+      cmake_version:
+        description: 'CMake版本'
+        required: false
+        default: '3.22.1'
+        type: string
+
+env:
+  ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+  JAVA_TOOL_OPTIONS: -Xmx4G
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      abi_list: ${{ steps.set-abis.outputs.abi_list }}
+    steps:
+      - name: Determine ABI list
+        id: set-abis
+        run: |
+          if [ "${{ github.event.inputs.abi || 'both' }}" = "both" ]; then
+            echo "abi_list=[\"arm64-v8a\", \"armeabi-v7a\"]" >> $GITHUB_OUTPUT
+          else
+            echo "abi_list=[\"${{ github.event.inputs.abi || 'arm64-v8a' }}\"]" >> $GITHUB_OUTPUT
+          fi
+          echo "Selected ABIs: ${{ steps.set-abis.outputs.abi_list }}"
+
+  build-native:
+    needs: setup
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        abi: ${{ fromJSON(needs.setup.outputs.abi_list) }}
+    env:
+      BUILD_TYPE: ${{ github.event.inputs.build_type || 'Release' }}
+      NDK_VERSION: ${{ github.event.inputs.ndk_version || '25.2.9519653' }}
+      ANDROID_PLATFORM: android-24
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: ${{ github.event.inputs.java_version || '21' }}
+
+    - name: Setup Android SDK and NDK
+      uses: android-actions/setup-android@v3
+      with:
+        ndk-version: ${{ env.NDK_VERSION }}
+
+    - name: Setup CMake
+      uses: jwlawson/actions-setup-cmake@v1.14
+      with:
+        cmake-version: ${{ github.event.inputs.cmake_version || '3.22.1' }}
+
+    - name: Setup build environment
+      id: setup-env
+      run: |
+        # 设置 NDK 路径
+        ANDROID_NDK_ROOT="$ANDROID_SDK_ROOT/ndk/${{ env.NDK_VERSION }}"
+        echo "ANDROID_NDK_ROOT=$ANDROID_NDK_ROOT" >> $GITHUB_ENV
+        echo "ANDROID_NDK_HOME=$ANDROID_NDK_ROOT" >> $GITHUB_ENV
+        echo "PATH=$ANDROID_NDK_ROOT:$PATH" >> $GITHUB_ENV
+        
+        echo "Building for ABI: ${{ matrix.abi }}"
+        echo "Build type: ${{ env.BUILD_TYPE }}"
+        echo "NDK path: $ANDROID_NDK_ROOT"
+        echo "NDK version: ${{ env.NDK_VERSION }}"
+
+    - name: Create build directory
+      run: |
+        mkdir -p build/android/${{ matrix.abi }}
+        ls -la
+
+    - name: Configure CMake for Android
+      working-directory: build/android/${{ matrix.abi }}
+      run: |
+        cmake ../../.. \
+          -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_ROOT/build/cmake/android.toolchain.cmake \
+          -DANDROID_ABI=${{ matrix.abi }} \
+          -DANDROID_PLATFORM=${{ env.ANDROID_PLATFORM }} \
+          -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }} \
+          -DANDROID_STL=c++_shared \
+          -DANDROID_TOOLCHAIN=clang \
+          -DANDROID_CPP_FEATURES="rtti exceptions"
+
+    - name: Build native libraries
+      working-directory: build/android/${{ matrix.abi }}
+      run: |
+        echo "Building native libraries for ${{ matrix.abi }}..."
+        nproc=$(nproc)
+        echo "Using $nproc parallel jobs"
+        make -j$nproc VERBOSE=1
+
+    - name: List built libraries
+      run: |
+        echo "Built files for ${{ matrix.abi }}:"
+        find build/android/${{ matrix.abi }} -name "*.so" -o -name "*.a" | xargs ls -lh 2>/dev/null || echo "No libraries found"
+
+    - name: Archive built libraries
+      uses: actions/upload-artifact@v4
+      with:
+        name: native-libs-${{ matrix.abi }}-${{ env.BUILD_TYPE }}
+        path: |
+          build/android/${{ matrix.abi }}/**/*.so
+          build/android/${{ matrix.abi }}/**/*.a
+        retention-days: 30
+
+    - name: Create stripped libraries (Release only)
+      if: env.BUILD_TYPE == 'Release'
+      run: |
+        echo "Creating stripped libraries for ${{ matrix.abi }}..."
+        find build/android/${{ matrix.abi }} -name "*.so" | while read lib; do
+          echo "Stripping $lib"
+          $ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip --strip-all "$lib"
+        done 2>/dev/null || echo "No libraries to strip"
+
+    - name: Verify library architecture
+      run: |
+        echo "Verifying library architecture for ${{ matrix.abi }}..."
+        find build/android/${{ matrix.abi }} -name "*.so" | while read lib; do
+          echo "File: $lib"
+          file "$lib" || true
+          echo "---"
+        done 2>/dev/null || echo "No libraries found for verification"
+
+  combine-and-package:
+    needs: build-native
+    if: |
+      github.event_name == 'push' || 
+      github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    env:
+      BUILD_TYPE: ${{ github.event.inputs.build_type || 'Release' }}
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Download all native artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: artifacts
+
+    - name: Create combined package
+      run: |
+        echo "Creating combined package for all ABIs..."
+        mkdir -p dist/android
+        
+        # 组织库文件
+        for artifact in artifacts/*; do
+          if [ -d "$artifact" ]; then
+            artifact_name=$(basename "$artifact")
+            if [[ "$artifact_name" =~ native-libs-(arm64-v8a|armeabi-v7a)- ]]; then
+              abi_type=$(echo "$artifact_name" | grep -oE '(arm64-v8a|armeabi-v7a)')
+              echo "Processing $abi_type libraries..."
+              mkdir -p "dist/android/libs/$abi_type"
+              find "$artifact" -name "*.so" -exec cp {} "dist/android/libs/$abi_type/" \; 2>/dev/null || true
+              find "$artifact" -name "*.a" -exec cp {} "dist/android/libs/$abi_type/" \; 2>/dev/null || true
+            fi
+          fi
+        done
+        
+        echo "Package structure:"
+        find dist/android -type f | sort || echo "No files found"
+
+    - name: Create README
+      run: |
+        cat > dist/android/README.md << EOF
+        # Android Native Libraries
+        
+        ## Build Information
+        - Build Date: $(date)
+        - Commit: ${{ github.sha }}
+        - Build Type: ${{ env.BUILD_TYPE }}
+        - Trigger: ${{ github.event_name }}
+        
+        ## Included ABIs
+        $(for dir in dist/android/libs/* 2>/dev/null; do echo "- $(basename $dir)"; done)
+        
+        ## Usage
+        1. Copy the .so files to your Android project's \`jniLibs\` directory
+        2. Ensure your \`build.gradle\` includes the appropriate ABI filters
+        EOF
+
+    - name: Package all libraries
+      run: |
+        cd dist/android
+        if ls libs/*/*.so 1>/dev/null 2>&1 || ls libs/*/*.a 1>/dev/null 2>&1; then
+          tar -czf android-native-libs-${{ github.sha_short }}-${{ env.BUILD_TYPE }}.tar.gz .
+          echo "Package created: android-native-libs-${{ github.sha_short }}-${{ env.BUILD_TYPE }}.tar.gz"
+          ls -lh *.tar.gz
+        else
+          echo "No libraries found to package"
+          exit 1
+        fi
+
+    - name: Upload combined package
+      if: success()
+      uses: actions/upload-artifact@v4
+      with:
+        name: android-native-libs-combined-${{ env.BUILD_TYPE }}
+        path: dist/android/*.tar.gz
+        retention-days: 30
+
+  create-release:
+    needs: combine-and-package
+    if: |
+      (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+      (github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Download combined package
+      uses: actions/download-artifact@v4
+      with:
+        name: android-native-libs-combined-${{ github.event.inputs.build_type || 'Release' }}
+        path: release
+
+    - name: Create version tag
+      id: create_tag
+      run: |
+        SHORT_SHA=$(git rev-parse --short HEAD)
+        TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+        BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
+        echo "TAG_NAME=native-v${TIMESTAMP}-${BUILD_TYPE}-${SHORT_SHA}" >> $GITHUB_OUTPUT
+        echo "RELEASE_NAME=Android Native Libraries ${TIMESTAMP} (${BUILD_TYPE})" >> $GITHUB_OUTPUT
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.create_tag.outputs.TAG_NAME }}
+        name: ${{ steps.create_tag.outputs.RELEASE_NAME }}
+        draft: false
+        prerelease: false
+        files: |
+          release/*.tar.gz
+        body: |
+          ## Android Native Libraries 构建
+          
+          **构建信息：**
+          - 构建时间：$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          - Commit: ${{ github.sha }}
+          - 触发方式：${{ github.event_name }}
+          - 构建类型：${{ github.event.inputs.build_type || 'Release' }}
+          
+          **支持的架构：**
+          ${{ fromJSON(needs.setup.outputs.abi_list) }}
+          
+          **包含的文件：**
+          - 动态链接库 (.so 文件)
+          - 静态链接库 (.a 文件，如果存在)
+          
+          **使用说明：**
+          将对应架构的 .so 文件复制到 Android 项目的以下目录：
+          ```
+          app/src/main/jniLibs/arm64-v8a/*.so
+          app/src/main/jniLibs/armeabi-v7a/*.so
+          ```
+
+    - name: Build summary
+      run: |
+        echo "========================================"
+        echo "          🎉 原生库构建完成！"
+        echo "========================================"
+        echo ""
+        echo "📋 构建详情："
+        echo "----------------------------------------"
+        echo "🏗️  构建类型: ${{ github.event.inputs.build_type || 'Release' }}"
+        echo "📱 目标架构: ${{ fromJSON(needs.setup.outputs.abi_list) }}"
+        echo "☕ Java版本: ${{ github.event.inputs.java_version || '21' }}"
+        echo "🛠️  NDK版本: ${{ github.event.inputs.ndk_version || '25.2.9519653' }}"
+        echo "⚙️  CMake版本: ${{ github.event.inputs.cmake_version || '3.22.1' }}"
+        echo ""
+        echo "✅ 构建结果："
+        echo "----------------------------------------"
+        echo "- Release: 已创建"
+        echo "- Tag: ${{ steps.create_tag.outputs.TAG_NAME }}"
+        echo ""
+        echo "🔗 Release URL: https://github.com/${{ github.repository }}/releases/tag/${{ steps.create_tag.outputs.TAG_NAME }}"
+        echo "========================================"
