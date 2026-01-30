@@ -1,0 +1,30 @@
+[
+  {
+    "position": {
+      "x": 0,
+      "y": 400
+    },
+    "duration": 0
+  },
+  {
+    "position": {
+      "x": -25,
+      "y": 400
+    },
+    "duration": 150
+  },
+  {
+    "position": {
+      "x": 25,
+      "y": 400
+    },
+    "duration": 400
+  },
+  {
+    "position": {
+      "x": 0,
+      "y": 400
+    },
+    "duration": 150
+  }
+]

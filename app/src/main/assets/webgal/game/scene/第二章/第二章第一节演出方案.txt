@@ -1,0 +1,231 @@
+
+;角色名，留空以继承上句:对话 -fontSize=default;
+;changeFigure:面馆老板 -id=mglb -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure: -id=think -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure:none -id=think -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+bgm:none ;
+changeFigure: -id=QD -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setAnimation:jump/ -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setAnimation:jump/ -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:nod -target=jm -next;
+bgm:none -next;
+;music暂停假如做得到的话最好
+角色名，留空以继承上句:对话 -fontSize=default;
+bgm: -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setTransform: -target=mglb -next;
+;左移出去
+
+changeFigure: -id=csm -next;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setAnimation:quiver/most -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+bgm:none;
+
+setAnimation:quiver/light -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setAnimation:quiver/light -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+bgm:不安;
+changeFigure: ;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:nod -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:nod -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure:think -id=think -zIndex=99 -next;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+bgm:none; 
+
+changeFigure:none -id=think -zIndex=99 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setTransform: -target=jm -next;
+;这里的镜头不需要变化
+playEffect: -next:;
+bgm:;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:nod -target=mglb -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=jm -next;
+;从桌子上跳下
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure:think -id=think -zIndex=99 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure:none -id=think -zIndex=99 -next;
+
+bgm:none;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:nod -target=jm -nod;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+;第二节
+
+changeBg:海边 -next;
+bgm:;
+changeFigure: -id=jm -next;
+setAnimation:shake/RLshake -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure: -id=csm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure:蓝天-黑夜 -zIndex=99 -next;
+;放大，缓慢上升，透明度的变化
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure:蓝天黑夜 -id=sky_night -zIndex=99 -next;
+setTransform: -target=sky_night -next;
+;蓝天-黑夜 alpha
+
+changeFigure:none -id=sky_night -zIndex=99 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure: -id=ps -next;
+playEffect:;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure: -id=cs -next;
+playEffect:;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure: -id=dc -next;
+playEffect:;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure: -id=dc -next;
+changeFigure: -id=cs -next;
+;其实这里直接改变透明度会比较好
+
+角色名，留空以继承上句:对话 -fontSize=default;
+
+
+changeFigure:none -id=ps -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure: -id=dc -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure: -id=cs -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:nod -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure: -id=csm -next;
+setAnimation:shake/UDshake -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure: -id=ps -next;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure:none -id=ps -next;
+changeFigure: -id=csm -next;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure:none -id=dc -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure: -id=cs -next;
+;记得她的位置
+setTransform: -target=cs -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setTransform: -target=cs -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setTransform: -target=cs -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=jm -next;
+setAnimation:nod -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+;cs移动到jm身边，然后，放缩镜头
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:nod4 -target=cs -next;
+setAnimation:RLshake -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:RLshake -target=jm -next;
+setTransform: -target=cs -next;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=cs -next;
+
+
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:jump -target=cs -next;
+setTransform: -target=cs -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setTransform: -target=cs -next;
+setTransform: -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+bgm:none ;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:bigjum -target=jm -next;
+setAnimation:quiver -target=cs -next;
+setTransform: -target=cs -next;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure:none -id=jm -next;
+changeFigure:none -id=cs -next;
+changeFigure:none -id=dc -next;
+changeFigure:none -id=ps -next;
+changeFigure: -id=csm -next;
+changeFigure:蓝天夜晚 -id=sky_night;
+;从上往下,之前的蓝天，设置为透明，这儿正好可以提高透明度
+changeBg:海边;
+changeFigure:
+playEffect:玩沙子;
+playEffect:wave;
+changeFigure: -id=jm -next;
+;这里的她要蹲下，记得提前设置好
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=jm -next;
+;站起来
+角色名，留空以继承上句:对话 -fontSize=default;
+
+;第三节
+
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=jm -next;
+;放大一些jm
+bgm:在你面前的犹豫;
+changeFigure: -id=csm -next;
+
+;选择界面,全部都是禁止选项
+
+
+;第一次选择了面馆
+
+
+
+
+
+
+
+

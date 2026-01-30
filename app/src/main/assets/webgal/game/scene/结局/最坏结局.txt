@@ -1,0 +1,36 @@
+bgm:;
+changeFigure: -id=jm -transform={"position":{"x":800,"y":600},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure: -id=zql -transform={"position":{"x":-800,"y":600},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure: -id=cs -transform={"position":{"x":-800,"y":600},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure: -id=cm -transform={"position":{"x":-800,"y":600},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure: -id=dc -transform={"position":{"x":-800,"y":600},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure: -id=ps -transform={"position":{"x":-800,"y":600},"scale":{"x":1.5,"y":1.5}} -next;
+
+changeFigure:色图/white.png -id=white -transform={"alpha":0} -zIndex=5 -next;
+changeFigure:色图/black.png -id=black -transform={"alpha":0} -next -zIndex=200;
+changeFigure:色图/fadeblack.png -id=fadeblack -transform={"alpha":0} -next -zIndex=7;
+changeFigure:色图/fadewhite.png -id=fadewhite -transform={"alpha":0} -next -zIndex=6;
+setTransform:{"alpha":1} -target=white -duration=1200 -next;
+:“大魅魔放弃了选择的机会”;
+bgm:世界尽头.mp3 
+:“在那之后发生了什么我不知道，我只知道...”;
+setTransform:{"alpha":1} -target=fadewhite -duration=1200 -next;
+changeFigure:jm/jm3-close.png -id=jm -transform={"position":{"x":800,"y":600},"scale":{"x":1.5,"y":1.5}} -zIndex=9 -next;
+:“她踏上了旅程，但她并不知道该去往哪里，因为在她的记忆里，这是一个从来没有过的世界。”;
+changeFigure:wdts/zql-s.png -id=zql -transform={"position":{"x":-800,"y":600},"scale":{"x":1.5,"y":1.5}} -zIndex=9 -next;
+:“只有一个不知名的伙伴，默默地陪着她，不知名的伙伴眼里的她也是不知名的伙伴,不知名的伙伴眼里的他也是不知名的伙伴。”;
+changeFigure:jm/jm1-h.png -id=jm -transform={"position":{"x":800,"y":600},"scale":{"x":1.5,"y":1.5}} -zIndex=9 -next;
+:“他们只是流浪，沉默地流浪，连呼吸的风声也没有，连胸口的震颤都没有的沉默....”;
+setTransform:{"alpha":1} -target=fadeblack -duration=1200  -next;
+:“在这一个平面化没有任何不同的不知名世界里流浪...”;
+:“....”;
+:“我也要继续前行了....”;
+:“....”;
+setTransform:{"alpha":1} -target=black -duration=1200  -next;
+:“等等，我好像忘记了什么，我看看...”;
+setVar:BADEND=1 -global;
+:“你..呃...呃嗯...达成了不...”;
+:“呃诶...结局....”;
+changeBg:完结点.png;
+:“—______完_________”;
+end;

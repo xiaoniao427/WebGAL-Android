@@ -1,0 +1,52 @@
+[
+	{
+		
+
+		"position": {
+			
+			"y": 400
+		},
+		"duration": 0
+
+	},
+
+	{
+		
+
+		"position": {
+		
+			"y": 0
+		},
+		"duration": 150
+
+	},
+	{
+		
+
+		"position": {
+			"y": 0
+		},
+		"duration": 30
+
+	},
+
+
+	{
+		
+
+		"position": {
+			"y": 420
+		},
+		"duration": 120
+
+	},
+	{
+		
+
+		"position": {
+			"y": 400
+		},
+		"duration": 150
+
+	}
+]

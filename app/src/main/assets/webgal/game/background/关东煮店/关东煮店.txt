@@ -1,0 +1,3 @@
+masterpiece,best quality,official art,extremely detailed CG unity 8k wallpaper,Hot pot restaurant,sunny,chair,desk,
+Negative prompt: nsfw, lowres, text, error,extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, human,girl,boy,
+Steps: 20, Sampler: DPM++ 2M SDE Heun, Schedule type: Automatic, CFG scale: 7, Seed: 3339720541, Size: 800x456, Model hash: b7583386f5, Model: A333ANYTSimpler_a333, VAE hash: 735e4c3a44, VAE: vae-ft-mse-840000-ema-pruned.safetensors, Denoising strength: 0.7, Clip skip: 2, Hires schedule type: Exponential, Hires upscale: 2, Hires upscaler: Latent, Version: v1.10.1

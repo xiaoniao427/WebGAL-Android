@@ -1,0 +1,26 @@
+[
+  {
+    "alpha": 0,
+    "position": {
+      "x": -2000,
+      "y": 0
+    },
+    "duration": 0
+  },
+  {
+    "alpha": 1,
+    "position": {
+      "x": 20,
+      "y": 0
+    },
+    "duration": 1500
+  },
+  {
+    "alpha": 1,
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "duration": 300
+  }
+]

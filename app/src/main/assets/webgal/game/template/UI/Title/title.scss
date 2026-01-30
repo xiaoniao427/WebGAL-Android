@@ -1,0 +1,70 @@
+.Title_main {
+width: 100%;
+height: 100%;
+position: absolute;
+z-index: 13;
+}
+
+.Title_buttonList {
+font-family: "思源宋体", serif;
+display: flex;
+position: relative;
+left: -50px;
+min-width: 50px;
+height: 100%;
+justify-content: center;
+align-items: center;
+flex-flow: row;
+transition: background 0.75s;
+padding-left: 50px;
+top: 600px;
+
+}
+
+.Title_button {
+font-weight: bold;
+text-align: center;
+flex: 0 1 auto;
+cursor: pointer;
+padding: 20px 20px 20px 20px;
+margin: 20px 50px 20px 10px;
+backdrop-filter: blur(5px);
+border-radius: 50px 50px 50px 50px;
+transform: skewX(-10deg);
+background: url("game/template/assets/按钮/散束线基本按钮-ps.png");
+text-shadow: 5px 5px 5px rgba(0,0,0,0);
+top: 500px;
+&:hover {
+text-shadow: 5px 0px 0px rgba(0,0,0,0);
+background: url("game/template/assets/按钮/散束线基本按钮-dc.png");
+}
+&:active {
+background: url("game/template/assets/按钮/散束线基本按钮-cs.png");
+}}
+
+.Title_button_text {
+color: #FF892E8C;
+background: #FCFC00FF;
+padding: 2px 2px 2px 2px;
+font-size: 200%;
+font-family: WebgalUI, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+letter-spacing: 0.;
+font-weight: bold;
+-webkit-background-clip: text;
+&:hover {
+color: #9C9C9CC4;
+z-index: 1;
+}
+&:active {
+color: #FF73BBFF;
+}}
+
+.Title_backup_background {
+width: 100%;
+height: 100%;
+position: absolute;
+z-index: 13;
+background: linear-gradient(135deg, #d7d4d4 0%, #ebebeb 100%);
+}
+
+

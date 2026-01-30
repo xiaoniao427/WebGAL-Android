@@ -1,0 +1,11 @@
+changeFigure:转场图/BGwarm1.png -id=zc -transform={"scale":{"x":2.5,"y":2.5}} -next;
+changeFigure:转场图/第一章/第一.png -id=bt1 -next;
+changeFigure:转场图/第一章/我是.png -id=bt2 -next;
+setAnimation:enter/enter-from-left -target=bt1 -next;
+setAnimation:enter/enter-from-left -target=bt2 -next;
+setAnimation:rotation/mediumBG-rotation -target=zc;
+setAnimation:exit/exit-to-right -target=bt1 -next;
+setAnimation:exit/exit-to-right -target=bt2;
+changeFigure:none -id=zc -next;
+changeFigure:none -id=bt1 -next;
+changeFigure:none -id=bt2 -next;

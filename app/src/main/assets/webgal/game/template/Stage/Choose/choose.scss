@@ -1,0 +1,61 @@
+.Choose_Main {
+position: absolute;
+width: 100%;
+height: 100%;
+display: flex;
+flex-flow: column;
+justify-content: center;
+align-items: center;
+z-index: 13;
+background: #0A0A0A82;
+}
+
+.Choose_item {
+font-family: "WebgalUI", serif;
+cursor: pointer;
+min-width: 50%;
+padding: 0.25em 1em 0.25em 1em;
+font-size: 265%;
+color: #FA6400D1;
+text-align: center;
+border-radius: 4px;
+border: 3px solid rgb(255, 180, 5);
+box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+background: #FFD573D9;
+margin: 0.25em 0 0.25em 0;
+transition: background-color 0.5s, border 0.5s, font-weight 0.5s, box-shadow 0.5s;
+&:hover {
+background: rgba(80, 80, 80, 0.7);
+box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+border: 3px solid #161615;
+color: #C7C7C7FF;
+}
+&:active {
+color: #FFBEBAFF;
+background: #FA709585;
+border: 3px solid #ff5757;
+}}
+
+.Choose_item_disabled {
+font-family: "WebgalUI", serif;
+cursor: not-allowed;
+min-width: 50%;
+padding: 0.25em 1em 0.25em 1em;
+font-size: 265%;
+color: #F0F0F0FF;
+text-align: center;
+border-radius: 4px;
+border: 3px dashed #4c4c4c;
+box-shadow: 0 0 25px #4c4c4c;
+background: #0A0A0AFF;
+margin: 0.25em 0 0.25em 0;
+transition: background-color 0.5s, border 0.5s, font-weight 0.5s, box-shadow 0.5s;
+
+}
+
+.Choose_item_outer {
+color: #000;
+min-width: 50%;
+}
+
+

@@ -1,0 +1,468 @@
+
+
+
+
+;changeBg:bg.png -next -transform={"alpha":0};
+changeBg:bg.png -duration=600 -transform={"alpha":1};
+changeFigure:jm/jm1-o2.png -right -id=jm -next;
+setAnimation:shake/UDshake -target=jm -next;
+changeFigure:选择立绘文件 -left -id=cpzA;
+setAnimation:shake/xy1most-quick-shake -target=cpzA;
+setTransform:{"position":{"x":-300}} -target=jm -duration=600 -next;
+setTransform:{"position":{"x":1200}} -target=cpzB -duration=600 -next;
+setTransform:{"position":{"x":100}} -target=cpzA -duration=600 -next;
+角色名，留空以继承上句:对话;
+setAnimation:mediumjump/y400medium-jumping -target=cpzC -next;
+setTransform:{"position":{"x":200}} -target=cpzA -duration=600 -next;
+角色名，留空以继承上句:对话;
+setTransform:{"position":{"x":300}} -target=cpzA -duration=600 -next;
+setTransform:{"position":{"x":-800}} -target=cpzB -duration=600 -next;
+角色名，留空以继承上句:对话;
+setTransform:{"position":{"x":400}} -target=cpzA -duration=600 -next;
+setTransform:{"position":{"x":800}} -target=cpzB -duration=600 -next;
+角色名，留空以继承上句:对话;
+setAnimation:bigjump/y400big-jumping -target=jm -next;
+setTransform:{"position":{"x":350}} -target=cpzA -duration=200 -next;
+角色名，留空以继承上句:对话;
+setTransform:{"position":{"x":-800}} -target=cpzB -duration=600 -next;
+setTransform:{"position":{"x":-900}} -target=cpzA -duration=600;
+角色名，留空以继承上句:对话;
+setAnimation:shake/UDshake -target=cpzC;
+角色名，留空以继承上句:对话;
+setAnimation:shake/UDshake -target=cpzB;
+setAnimation:nod/x-800y400-nod -target=cpzC;
+角色名，留空以继承上句:对话;
+setAnimation:shake/lightRLshake -target=cpzB;
+角色名，留空以继承上句:对话;
+changeFigure:转场图/black.png -id=black -transform={"alpha":0.4} -zIndex=5;
+角色名，留空以继承上句:对话;
+changeFigure: -id=black -next;
+setTransform:{"position":{"x":-750}} -target=jm -duration=300 -next;
+setTransform:{"position":{"y":-750}} -target=cpzB -duration=60 -next;
+setTransform:{"position":{"y":-600}} -target=cpzA -duration=60 -next;
+setTransform:{"position":{"y":-600}} -target=cpzC -duration=60 -next;
+setAnimation:nod/x-800y400-nod -target=jm;
+角色名，留空以继承上句:对话;
+setTransform:{"scale":{"x":-1}} -target=jm -duration=600;
+角色名，留空以继承上句:对话;
+setTransform:{"scale":{"x":1}} -target=jm -duration=600;
+角色名，留空以继承上句:对话;
+setTransform:{"position":{"x":-200}} -target=cpzA -duration=600 -next;
+setTransform:{"position":{"x":-200}} -target=cpzC -duration=600 -next;
+setTransform:{"position":{"x":-200}} -target=cpzB -duration=600 -next;
+playEffect:选择效果音文件;
+角色名，留空以继承上句:对话;
+setTransform:{"position":{"y":-850}} -target=jm -duration=300;
+角色名，留空以继承上句:对话;
+setAnimation:shake/lightUDshake -target=jm;
+角色名，留空以继承上句:对话;
+changeFigure:bg.png -id=校园 -transform={"scale":{"x":2,"y":2}};
+setTransform: -target=校园 -duration=0 -next;
+setTransform: -target=jm -duration=0;
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=jm -duration=0;
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=jm -duration=0;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:quiver/xy1most-quick-quiver -target=jm;
+setAnimation:nod/y400-nod -target=jm;
+changeFigure:选择立绘文件 -id=csm;
+角色名，留空以继承上句:对话;
+setTransform: -target=csm -alpha=0.33 -duration=0;
+角色名，留空以继承上句:对话;
+setTransform: -target=csm -alpha=0.23 -duration=0;
+角色名，留空以继承上句:对话;
+setTransform: -target=csm -alpha=0.23 -duration=0;
+changeFigure:none -id=csm;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure: -id=校园 -zIndex=0 -next;
+setAnimation: -target=jm -next;
+setAnimation: -target=校园 -next;
+;背景从左到右推移，角色从右到左移动,角色要不要小跳着走
+playEffect:选择效果音文件 -next;
+changeFigure: -id=cpzA -zIndex=2 -next;
+changeFigure: -id=cpzB -zIndex=3 -next;
+changeFigure: -id=cpzC -zIndex=4 -next;
+changeFigure: -id=cpz甲 -zIndex=5 -next;
+changeFigure: -id=cpz乙 -zIndex=6 -next;
+changeFigure: -id=cpz丙 -zIndex=7 -next;
+bgm: ;
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: {"position":{"x":-60,"y":400}} -duration=300 -target=jm -next;
+setTransform: {"position":{"x":-60,}} -duration=300 -target=校园 -next;
+changeFigure: -id=ps -next;只露出一点胳膊 
+;i靠近人群，靠的近一点，距离人群只留出一个给cpz丙的距离即可，背景也要一起移动
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:bigjump/y400big -target=cpzA -next;
+setAnimation:bigjump/y400big -target=cpzB -next;
+setAnimation:bigjump/y400big -target=cpzC -next;
+setAnimation:bigjump/y400big -target=cpz甲 -next;
+setAnimation:bigjump/y400big -target=cpz乙 -next;
+setAnimation:bigjump/y400big -target=cpz丙 -next;
+;他们各自跳跃的高度需要做出不同吗
+;其实人群也可以有轻微的变动，在他们对话的期间，例如层级顺序，但生硬地改变层级顺序不太舒适，一般要加上一个动画，就像人要挤进去的话，总是要左右绕道
+changeFigure:jm/jm1-a -id=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation: mediumjump/y400medium -target=jm;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:bigjump/y400big -target=cpzA -next;
+setAnimation:bigjump/y400big -target=cpzB -next;
+setAnimation:bigjump/y400big -target=cpzC -next;
+setAnimation:bigjump/y400big -target=cpz甲 -next;
+setAnimation:bigjump/y400big -target=cpz乙 -next;
+setAnimation:bigjump/y400big -target=cpz丙 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:shake/UDshake -target=cpz丙 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform:{"position":{"x":100,"y"400:}}: -duration=300 -target=cpz丙 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setTransform:{"position":{"x":,"y":400}} -duration=60 -target=cpz丙 -next;
+setTransform:{"position":{"x":,"y":100}} -duration=300 -target=cpz丙 -next;
+setTransform:{"position":{"x":,"y":100}} -duration=300 -target=cpz丙 -next;
+setTransform:{"position":{"x":,"y":420}} -duration=400 -target=cpz丙 -next;
+setTransform:{"position":{"x":,"y":400}} -duration=60 -target=cpz丙 -next;
+;这里我们试试直接通过变换做点头动画
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform:{"scale":{"x":-1}} -target=cpz丙 - duration=60 -next;
+setAnimation:bigjump/y400big -target=cpzA -next;
+setAnimation:bigjump/y400big -target=cpzB -next;
+setAnimation:bigjump/y400big -target=cpzC -next;
+setAnimation:bigjump/y400big -target=cpz甲 -next;
+setAnimation:bigjump/y400big -target=cpz乙 -next;
+setAnimation:bigjump/y400big -target=cpz丙 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+bgm:none;
+changeFigure:none -id=cpzA -next;
+changeFigure:none -id=cpzB -next;
+changeFigure:none -id=cpzC -next;
+changeFigure:none -id=cpz甲 -next;
+changeFigure:none -id=cpz乙 -next;
+changeFigure:none -id=cpz丙  -next;
+changeFigure:none -id=jm -next;
+changeBg:共通线/我或许会拥有的人生片段其一;
+;平三的，这儿有机会的话做演出
+角色名，留空以继承上句:对话 -fontSize=default;
+bgm: ;
+角色名，留空以继承上句:对话 -fontSize=default;
+;如果要做cg演出过渡的话，前面就要隐藏背景改立绘
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeBg:共通线/我或许会拥有的人生片段其二;
+;电磁的
+bgm: ;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeBg: ;
+changeFigure: -id=校园 -zIndex=1 -next;
+changeFigure: -id=cpzA -zIndex=3 -next;
+changeFigure: -id=cpzB -zIndex=4 -next;
+changeFigure: -id=cpzC -zIndex=8 -next;
+changeFigure: -id=cpz甲 -zIndex=7 -next;
+changeFigure: -id=cpz乙 -zIndex=6 -next;
+changeFigure: -id=cpz丙 -zIndex=2 -next;
+changeFigure: -id=jm -zIndex=5 -next;
+changeFigure: -id=cs -zIndex=9 -next;
+;都待在右边，乙要靠近她们俩一些
+changeFigure: -id=dc -next;
+changeFigure: -id=ps -next;
+;左边
+
+角色名，留空以继承上句:对话 -fontSize=default;
+;他们对话期间，小错书要抖动一下
+setAnimation: -target=dc -next;
+;蹲下翻包
+
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation: -target=cs -next;
+;他们对话期间，小错书要抖动一下
+
+changeFigure:none -id=cpzA -next;
+changeFigure:none -id=cpzB -next;
+changeFigure:none -id=cpzC -next;
+changeFigure:none -id=cpz甲 -next;
+changeFigure:none -id=cpz乙 -next;
+changeFigure:none -id=cpz丙  -next;
+changeFigure:none -id=jm -next;
+changeFigure:none -id=ps -next;
+changeFigure:none -id=dc -next;
+changeFigure:none -id=cd -next;
+changeBg:共通线/我或许会拥有的人生片段其二 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeBg:共通线/我或许会拥有的人生片段其二;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+changeBg:校园;
+;立绘的展示和位置抄上面的代码就可以
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure: -id=dc -next;
+
+setTransform:{"position":{"x":,"y":100}} -duration=120 -target=dc -next;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setTransform:{"position":{"x":,"y":400}} -duration=120 -target=dc -next;
+
+;他们对话期间，小错书要抖动一下
+
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure:none -id=cpzA -next;
+changeFigure:none -id=cpzB -next;
+changeFigure:none -id=cpzC -next;
+changeFigure:none -id=cpz甲 -next;
+changeFigure:none -id=cpz乙 -next;
+changeFigure:none -id=cpz丙  -next;
+changeFigure:none -id=jm -next;
+changeFigure:none -id=ps -next;
+changeFigure:none -id=dc -next;
+changeFigure:none -id=cd -next;
+changeBg:共通线/我或许会拥有的人生片段其二 -next;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeBg:共通线/我或许会拥有的人生片段其二 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeBg:共通线/我或许会拥有的人生片段其二 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeBg:校园 -next;
+changeFigure: "{scale{"x":,"y":}}",{"position":{"x":, "y": }} -id=dc -zIndex=10 -next;
+;放大，别忘了其他角色的立绘
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure: -id=dc -next;
+;正常大小
+角色名，留空以继承上句:对话 -fontSize=default;
+
+bgm: ;
+changeBg:none -next;
+changeFigure:校园 -id=校园 -zIndex=0 -next;
+;背景改立绘
+setAnimation:quiver/ -id=校园 -next; 
+;此处的颤抖持续时间应该长一些
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure:black -zIndex=100 -next;
+;直接用黑色覆盖
+setTransform: -target=jm -duration= -next;
+setTransform: -target=cs -duration= -next;
+;jm和cs一起被挤出来，还要做动画吗？
+;若是直接被将整个被挤出来的过程全部展示出来，受制于游戏呈现的方式，整个动画可能比较尴尬
+;假如来一个黑色场景过渡，会更好一些
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setAnimation:quiver -target=cs -next;
+setAnimation:nod -target=jm -next;
+playEffect: -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: {"position":{"x":,"y":}} -target=cs -duration= -next;
+setTransform: {"position":{"x":,"y":}} -target=cs -duration= -next;
+setTransform: {"position":{"x":,"y":}} -target=cs -duration= -next;
+setTransform: {"position":{"x":,"y":}} -target=cs -duration= -next;
+playEffect: -next;
+;这儿也尝试用变换设置跳跃动画吧
+setAnimation: -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+playEffect:wind -next;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setAnimation:下移逃走 -next;
+;逃走，要先后撤蓄力，之后一下子迸射出去，如果要搭配音效的话需要做成两段
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=校园 -next;
+setTransform: -target=dc ;
+;dc略过jm，靠近ps,镜头跟着移动,直到看不见众人
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setTransform: -target=校园 -next;
+;镜头后移，聚焦到众人，这时jm的表情
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=校园 -next;
+;镜头拉回，
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setTransform: -target=校园 -next;
+;镜头后移，聚焦到众人，这时jm的表情
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setTransform: -target=校园 -next;
+;镜头拉回，
+角色名，留空以继承上句:对话 -fontSize=default;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=dc -next;
+;dc后撤
+
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:quiver -target=dc -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setTransform: -target=校园 -next;
+；视角聚焦到jm，
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:exit/ -target=jm -next;
+setTransform: -target=校园 -next;
+;jm move 人群之后，背景跟着移动
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:shake/RLshake -target=jm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=校园 -next;
+bgm:none;
+;镜头向右推移，
+changeFigure:white -transform={"alpha":0} -zIndex=99 -id=white -next;
+changeFigure:none -id=jm;
+changeFigure:none -id=cs;
+
+setTransform: alpha=1 -target=white -duration=1800 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+bgm: ;
+changeBg:共通线/我或许会拥有的人生片段其三 -next;
+setTransform: alpha=0 -target=white -duration=1800 -next;
+changeFigure: -id=片段其三-next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure:拆分2 -id=片段其三 -next;
+setAnimation:quiver -target= -next;
+
+changeFigure:拆分3 -id=片段其三 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeBg:校园 -next;
+changeFigure: -id=cs -next;
+changeFigure: -id=jm -next;
+changeFigure:none -id=片段其三 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:shake/lightRLshake -target=cs -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure:think -id=think -zIndex=99 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure:none -id=think -zIndex=99 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:quiver -target=cs -next;
+changeFigure:think -id=think -zIndex=99 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure:none -id=think -zIndex=99 -next;
+
+setTransform: -target=cs -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure:think -id=think -zIndex=99 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: {"position":{"x":,"y":}} -target=cs -duration=300 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: {"position":{"x":,"y":}} -target=cs -duration=30 -next;
+setAnimation:quiver -target=cs -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure:none -id=think -zIndex=99 -next;
+
+changeFigure:think -id=think -zIndex=99 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure:none -id=think -zIndex=99 -next;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=jm;
+setTransform: -target=cs -next;
+playEffect: -next;
+bgm: ;
+;cs倒下
+
+角色名，留空以继承上句:对话 -fontSize=default;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=jm -next;
+;jm蹲下
+playEffect: ;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+playEffect: ;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+playEffect: ;
+
+setTransform: -target=jm -next;
+playEffect: ;
+;站起来
+角色名，留空以继承上句:对话 -fontSize=default;
+
+bgm: ;
+changeFigure: -id=csm -zIndex=101 -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:shake -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+bgm: ;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure:-id=csm -next;
+;修改csm透明度
+bgm: ;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure:-id=csm -next;
+;修改csm透明度
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure: -id=njzr -next;
+setTransform: -target=njzr -next;
+;底部进入
+
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=njzr -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+setAnimation:shake/UDshake -target=jm -next;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure:none -id=csm -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setTransform:;
+;镜头左移，
+角色名，留空以继承上句:对话 -fontSize=default;
+
+changeFigure:;
+角色名，留空以继承上句:对话 -fontSize=default;
+changeFigure:none -id=csm -next;
+
+setAnimation:RLshake -target=njzr -next;
+角色名，留空以继承上句:对话 -fontSize=default;
+
+
+setTransform: -target=cpz丙 -next;
+setTransform: -target=cpz甲 -next;
+setTransform: -target=cpz乙 -next;
+setTransform: -target=cpzA -next;
+setTransform: -target=cpzB -next;
+setTransform: -target=cpzC -next;
+setTransform: -target=dc -next;
+setTransform: -target=ps -next;
+;人群散开
+playEffect: ;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setTransform: -target=cpz丙 -next;
+;丙跑回来
+角色名，留空以继承上句:对话 -fontSize=default;
+bgm:;
+playEffect: ;
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=校园 -next;
+;镜头右移
+
+setAnimation:;
+;抬起cs一系列动画
+角色名，留空以继承上句:对话 -fontSize=default;
+setTransform: -target=jm -next;
+
+setAnimation:;
+;一起右移，如果可以的话，这儿的动画可以做得很有难度，他小跑着走，cs也要颠簸着上下晃动
+角色名，留空以继承上句:对话 -fontSize=default;
+
+setAnimation:nod -target=jm -next;
+;如果前面的点头动画成功的话
+角色名，留空以继承上句:对话 -fontSize=default;
+
+转场图
+
+

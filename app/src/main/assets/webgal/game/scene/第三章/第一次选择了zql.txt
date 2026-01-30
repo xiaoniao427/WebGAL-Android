@@ -1,0 +1,351 @@
+;第一次选择了好朋友
+changeFigure: -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=4;
+changeBg:;
+changeFigure:cm/cm1-a.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+bgm:开花太阳.mp3 -enter=3600 -next;
+:“厝束一脸错愕地盯着你。”;
+changeFigure:cm/cm2-ah2.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“啊——”;
+厝述:“啊啊啊——”;
+changeFigure:cm/cm1-shy.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“原来你竟然是....”;
+changeFigure:cm/cm1-shy2.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“啊~|啊。”;
+changeFigure:cm/cm1-se.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:等等，为什么我似乎有点开心？;
+changeFigure:cm/cm1-shy2.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“嘿嘿，容我想象一下...”;
+bgm:  -enter=5400 -next;
+setTransform:{"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":1} -target=cm -duration=1200 -next;
+changeFigure:cm/cm1-shy2.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5}} -zIndex=101 -next; 
+changeBg:自行想象!/自行想象!.png -next -unlockname=请自行想象！;
+changeFigure:cm/cm1-t2.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5}} -zIndex=101 -next; 
+厝述:“嗯嗯...手要放在那儿，腿要伸在这儿，刘海和眉毛...因为女性的头发是很有魅力的地方！所以男性的毛发也是很重要的！|不是我说，这个好朋友的眉毛真的好粗啊，都快长到睫毛上了，他在科幻武侠作品里一定很能打吧。”;
+changeFigure:自行想象!/自行想象!.png -id=xxl -next;
+changeBg:none -next;
+bgm:请深爱切-1.mp3  -enter=5400 -next;
+setTransform:{"rotation":10} -target=xxl -duration=1200;
+changeFigure:cm/cm2-t.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5}} -zIndex=101 -next; 
+厝述:“然后是...”;
+setTransform:{"rotation":3} -target=xxl -duration=1200 -next;
+changeFigure:cm/cm1-t3.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5}} -zIndex=101 -next; 
+厝述:“....”;
+setTransform:{"rotation":140} -target=xxl -duration=1000 -next;
+changeFigure:cm/cm1-t.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5}} -zIndex=101 -next; 
+厝述:“...啾”;
+changeFigure:自行想象!/自行想象!！.png -id=xxl -next;
+setTransform:{"rotation":50} -target=xxl -duration=1000 -next;
+changeFigure:cm/cm1-shy2.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5}} -zIndex=101 -next; 
+厝述:“！！！”;
+changeFigure:自行想象!/自行想象!！.png -id=xxl -next;
+setTransform:{"rotation":300} -target=xxl -duration=1000 -next;
+changeFigure:cm/cm2-shy3.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5}} -zIndex=101 -next; 
+厝述:“啊啊啊！为什么我真的能想象出来啊！！”;
+changeFigure:cm/cm1-a.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+setTransform:{"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -target=cm -duration=1200 -next;
+changeFigure:none -id=xxl -next;
+bgm:  -enter=5400 -next;
+changeBg:gtx/而我只是这般幻想/而我只是这般幻想-o.png -transform={"blur":50};
+厝述:“诶？”;
+changeFigure:cm/cm1-se.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+？？:“....”;
+？？:“你可不是这么选的...”;
+bgm:重力之恋2-加强.mp3  -enter=5400 -next;
+changeBg:gtx/而我只是这般幻想/而我只是这般幻想-o4.png -transform={"blur":30};
+changeFigure:cm/cm1-se2.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“鞥？”;
+changeFigure:cm/cm1-o.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+？？:“自始至终....”;
+？？:“都不是这么选的....”;
+changeFigure:cm/cm2-t.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+？？:“别再骗我了。”;
+？？:“不要骗我了。”;
+changeFigure:cm/cm2-t2.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“下一秒不会播放一个男性人类的跳舞视频吧？”;
+？？:“我....”;
+changeFigure:cm/cm2-kh.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+？？:“不想再被|骗了....”;
+？？:“....”;
+？？:“...............”;
+？？:“......................”;
+bgm:  -enter=5400 -next;
+厝述:“鞥鞥？”;
+changeFigure:cm/cm1-se2.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“欸？什么啊？莫名其妙。”;
+changeFigure:cm/cm1-s.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“但能做的事情只有一件。”;
+changeFigure:cm/cm1-n.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“重新选吧！;
+changeBg:gtx/而我只是这般幻想/而我只是这般幻想-s.png -transform={"blur":30} -unlockname=而我只是这般幻想 -next;
+choose:厝述:第三章/csx/csx第三章第一节.txt|平潵:第三章/psx/psx第三章第一节.txt|典伺:第三章/dcx/dcx第三章第一节.txt|面馆老板:选择场景文件|[jm==-1]->好朋友:第三章/第一次选择了zql.txt;
+changeBg:海边/海边-夜晚.png -transform={"position":{"x":0,"y":-600},"scale":{"x":2,"y":2}} -next;
+changeFigure:cm/cm2-a3.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+changeFigure:jm/jm1-n.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=4;
+changeFigure:wdts/zql-a.png -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+changeFigure:npc/面馆老板.png -id=mglb -transform={"position":{"x":-800,"y":-1500},"scale":{"x":1.5,"y":1.5},"rotation":2} -next -zIndex=4;
+changeFigure:kzcs/神秘抱枕.png -id=kc -transform={"position":{"x":-800,"y":-1300},"scale":{"x":1.5,"y":1.5},"rotation":4} -next -zIndex=4;
+面馆老板:“啊——|选择了我？真的假的？没有搞错吧？|咕嘿嘿。”;
+setTransform:{"position":{"x":-800,"y":1200},"rotation":2} -target=kc -duration=1400 -next;
+setTransform:{"position":{"x":-800,"y":1200},"rotation":3} -target=mglb -duration=300 -next;
+厝述:“哇啊啊啊~你选了什么！我可不想在我的存档里留下这样的游玩记录！”; 
+changeFigure:cm/cm2-no3.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+changeFigure:色图/black.png -id=black -transform={"alpha":1} -zIndex=102 -next;
+setTransform:{"alpha":1} -target=black -duration=1200;
+changeFigure:none -id=cm -transform={"position":{"x":0,"y":800},"scale":{"x":1.5,"y":1.5}} -next -zIndex=4;
+changeFigure: -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+changeFigure: -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=4;
+changeBg:卧室/卧室-夜.png -transform={"position":{"x":0,"y":-1800},"scale":{"x":4,"y":4}} ;
+changeFigure: -id=mglb -transform={"position":{"x":-800,"y":-1500},"scale":{"x":1.5,"y":1.5},"rotation":2} -next -zIndex=4;
+changeFigure: -id=kc -transform={"position":{"x":-800,"y":-1300},"scale":{"x":1.5,"y":1.5},"rotation":4} -next -zIndex=4;
+changeFigure:cm/cm2-no3.png -id=cm -transform={"position":{"x":0,"y":-2000},"scale":{"x":4,"y":4}} -next -zIndex=4;
+setTransform:{"alpha":0} -target=black -duration=1200;
+:你还没来得及看见面馆老板从沙滩上爬起来就从椅子上摔了下来。;
+changeFigure:cm/cm1-o.png -id=cm -transform={"position":{"x":0,"y":-2000},"scale":{"x":4,"y":4}} -next -zIndex=4;
+厝述:这种选项怎么可能正确啊！” -fontSize=large;
+changeFigure:cm/cm2-no3.png -id=cm -transform={"position":{"x":0,"y":-2000},"scale":{"x":4,"y":4}} -next -zIndex=4;
+厝述:“啊啊～「面馆老板」....|你原来这么喜欢面条吗！！打算和面条结婚吗？！！记得叫上伴娘茶泡饭！”;  
+changeFigure: -id=cm -transform={"position":{"x":0,"y":-2000},"scale":{"x":4,"y":4}} -next -zIndex=4;
+setTransform:{"alpha":1} -target=black -duration=1200 -next;
+:“你站了起来！|原因很简单，，毕竟是你自己选择打开了这个游戏。”;
+changeBg:海边/海边-夜晚.png -transform={"position":{"x":0,"y":-600},"scale":{"x":2,"y":2}} -next;
+:“因为你还想继续玩Galgame啊！！厝述平潵典伺她们还在等着被你攻略啊！！！怎么可以这样轻易放弃！！！！！ ” -fontSize=large;
+changeFigure:wdts/zql-a.png -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+changeFigure:cm/cm2-close.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+changeFigure:jm/jm1-n.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+changeFigure:npc/面馆老板.png -id=mglb -transform={"position":{"x":-1000,"y":400},"scale":{"x":-1.5,"y":1.5}} -next -zIndex=4;
+changeFigure:kzcs/神秘抱枕.png -id=kc -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"rotation":5} -next -zIndex=5;
+setTransform:{"alpha":0} -target=black -duration=1200;
+厝述:“...” -fontSize=default;
+changeFigure:cm/cm2-t.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“我不会做面条啊...那据说是个体力活，体力活的话，我...”;
+changeFigure:cm/cm1-shy.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“...”;
+changeFigure:cm/cm2-e2.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“不过做面条那种事，我一学肯定就能会！”;
+面馆老板:“嘿嘿...这样真的好吗？”;
+changeFigure:wdts/zql-a2.png -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+changeFigure:cm/cm1-dz.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“啊！别无视我自顾自地开始玩！”;
+changeFigure:jm/jm3-shy.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“不...可以吗？”;
+changeFigure: -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+面馆老板:“唉！既然玩家选择了我，说明就有这种需要！我只能先暂时答应了！”;
+changeFigure:wdts/zql-h2.png -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+好朋友:“恭喜恭喜（鼓掌鼓掌）。”;
+changeFigure:jm/jm1-shy.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“哎嘿嘿~”;
+bgm:;
+changeFigure:色图/white.png -id=white -zIndex=100 -next;
+:“溜溜的口感，你吃过没？” -fontSize=default;
+:“窣窣的声音，你听过没？” -fontSize=default;
+:“虽然这样讲有点奇怪，但还是要恭喜你和面——” -fontSize=default;
+setTransform:{"alpha":0} -target=white -duration=300 -next;
+setTransform:{"alpha":1} -target=black -duration=1200 -next;
+面馆老板:“之后，因为我已经结婚了，所以恕我拒绝！”;
+setTransform:{"alpha":0} -target=black -duration=1200;
+changeFigure:jm/jm3-pie.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“哦，结婚了呀，结婚了就——”;
+changeFigure:wdts/zql-star.png -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+好朋友:“这岂不更好了？！”;
+changeFigure:jm/jm2-a.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“哈？”;
+面馆老板:“你有病吧？”;
+changeFigure:wdts/zql-dy.png -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+changeFigure:jm/jm1-h.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“哈哈哈。”;
+面馆老板:“说起来，今日俺の妻去cos拍外景了，不知道也不怪你。”;
+changeFigure:wdts/zql-pie.png -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+changeFigure:jm/jm1-n.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“啊~是这样呀。”;
+changeFigure:wdts/zql-o.png -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+面馆老板:“她在布置店铺，规划菜单，探讨人生等方面对我都有很多的帮助啊，简直是智慧美貌贤良相结合——”;
+changeFigure:jm/jm3-t2.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“好了好了，别晒了，话说你为什么会在这儿啊！穿着睡衣...”;
+changeFigure:jm/jm1-se2.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“还....抱着抱枕....|	而且这抱枕上的图案...各种意义上都...都...呃....我的魔王啊，这....我无法评价。”;
+面馆老板:“我也好奇，我还在睡觉呢...突然受到一股非常强大的力量的控制，就忽然出现在这儿了...|啊啊，我得先回去了....「她还在等着我」...瓦库瓦库嘻嘻，刚刚这句真帅...”;大魅魔:“啊哈哈...我也没打算留你...”;
+面馆老板:“但我觉得也不能让你选择我的那份真心白费，我可以告诉你一个秘密。”;
+changeFigure:jm/jm2-n2.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“什么秘密？你家的祖传配方？”;
+面馆老板:“配方什么的我已经说过了。那不是最重要的。”;
+changeFigure:jm/jm1-o2.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“难道是超奥义·究极隐藏菜品？”;
+面馆老板:“你能不能别总是想着吃？我们要有点追求！像是拯救世界！”;
+changeFigure:jm/jm2-kh3.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“.....”;
+changeFigure:jm/jm3-a.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+changeFigure:wdts/zql-a.png -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+setTransform:{"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"rotation":350} -target=kc -duration=6000 -next;
+面馆老板:“这个秘密就是「我们店门口的金属雕像是可以变身的」！只要你大喊「邦扎——————」（超大声）就能唤醒她们！是不是非常卡酷一？是不是非常毛爱的！！！哇啊啊啊啊！（面馆老板挥舞着抱枕）” -fontSize=large;
+changeFigure:wdts/zql-n2.png -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+好朋友:“还好这儿距离你的店比较远。”;
+changeFigure:jm/jm1-s.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“好的，下次我会试一试！”;
+面馆老板:“如果我的设定没有问题的话，不同的人喊会给使她们换出不一样的战斗服，同志哟！我很期待你的表现！”;
+changeFigure:jm/jm1-e.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“定不会辜负，哼哼~”;
+面馆老板:“还有，我打算歇业一周。”;
+changeFigure:jm/jm1-n.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“为什么呀？”;
+面馆老板:“....”;
+changeFigure:jm/jm3-s.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“不是为了陪你的妻子吧！”;
+面馆老板:“....”;
+changeFigure:jm/jm1-sh2.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“噶哇哇，好恩爱~”;
+changeFigure:jm/jm2-a.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+面馆老板:“是因为店里的食材都没有了啊！！”;
+changeFigure:jm/jm1-dy.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+面馆老板:“为什么面馆老板我不及时选择变成萝莉猫娘啊，留住面子但没了面条还爆出大面额的金币，简直没有脸面去面见她安慰我的亚撒柔面孔....|我只是一介肥宅，为什么要这样对我...”;
+changeFigure:jm/jm1-close.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -zIndex=8;
+changeFigure: -id=mglb -transform={"position":{"x":-800,"y":-1500},"scale":{"x":1.5,"y":1.5},"rotation":2} -next -zIndex=4;
+changeFigure: -id=kc -transform={"position":{"x":-800,"y":-1300},"scale":{"x":1.5,"y":1.5},"rotation":4} -next -zIndex=4;
+
+:“面馆老板向左向右微倾着有些宽胖的身子蹒跚走着，举高高抱枕，高过头顶，以免被海沙弄脏。|但愿我们的大魅魔能再次学到些什么。”;
+changeFigure:jm/jm3-sign.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“还好海鸥不像夜枭那样夜间出没。”;
+changeFigure:wdts/zql-s.png -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+好朋友:“看来你和海鸥之间有过亲密的交流。”;
+changeFigure:jm/jm1-pie.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“亲密嘛...啊哈哈...”;
+好朋友:“.......”;
+changeFigure:jm/jm2-se.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“....”;
+大魅魔:“你怎么在这儿？”;
+changeFigure:wdts/zql-n.png -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+好朋友:“对啊，我怎么在这儿...”;
+changeFigure:wdts/zql-n2.png -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+changeFigure:jm/jm1-t2.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+好朋友:“我为什么会在这儿呢？我什么时候在这儿的？”;
+changeFigure: -id=zql -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+大魅魔:“....”;
+changeFigure:jm/jm2-h.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“难不成是帮我来攻略美少女的？嗯嗯，看来我的魅惑魔法更强了。”;
+changeFigure:cm/cm2-t.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“话说面馆老板不是美少女吧...”;
+changeFigure:jm/jm1-n3.png -id=jm -transform={"position":{"x":0,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=8;
+大魅魔:“哎呀，他已经结婚就没办法了呢，就算是魅魔，我也是拒绝牛的！”;
+changeFigure:cm/cm2-se.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“我也是拒绝的，起码要榨干一个后再决定下一个是谁...不能一心二用，这事关魔道主义原则的职业道德！”;
+:“厝述一边说着，一边拿出一包原味牛油饼干丢在地上，猛踩上去。”;
+:“一刹那，它支离破碎的身体便随着塑料包装袋破裂发出的噗噜噜声秃噜噜地奔泻出来，哗啦啦，洒出了绿色牵牛花的形状。”;
+:“...”;
+changeFigure:cm/cm2-pie.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“啊？为什么不光脚？”;
+changeFigure:cm/cm1-sign.png -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+厝述:“我才不想奖励他...还是说你也想——”;
+changeFigure: -id=cm -transform={"position":{"x":500,"y":1600},"scale":{"x":3.5,"y":3.5},"alpha":0.33} -zIndex=101 -next; 
+大魅魔:“是啊，没办法呢喵。”;
+大魅魔:“咳~咳~所以重新选吧。”;
+
+
+choose:厝述:第三章/csx/csx第三章第一节.txt|平潵:第三章/psx/psx第三章第一节.txt|典伺:第三章/dcx/dcx第三章第一节.txt|[jm==-1]->面馆老板:选择场景文件|[jm==-1]->好朋友:第三章/第一次选择了zql.txt;
+;这次的选择，就只剩下三个了
+
+
+
+;以下是演出方案计划
+;changeFigure:海边 -id=sea -next;
+;setTransform: -target=jm -next;
+;角色名，留空以继承上句:对话 -fontSize=default;
+;选择，带着面馆
+
+
+
+
+;intro:;
+;changeFigure: -id=mglb -next;
+;changeFigure: -id=jm -next;
+;setAnimation:enter/from -target=mglb -next;
+;setAnimation:mostquiver/ -target=sea -next;
+;setAnimation:mostquiver/ -target=jm -next;
+;playEffect:摔倒 -next;
+;mglb掉下来，只露出个头后主角就被cs推翻
+;角色名，留空以继承上句:对话 -fontSize=default;
+
+;changeFigure:black -id=black -zIndex=99 -next;
+;角色名，留空以继承上句:对话 -fontSize=default;
+;bgm:哈哈哈;
+;playEffect:摔倒;
+;setAnimation:mostquiver -target=black -next;
+;角色名，留空以继承上句:对话 -fontSize=default;
+
+;睁眼，假如能做的话
+;角色名，留空以继承上句:对话 -fontSize=default;
+;changeFigure:卧室 -id=卧室 -next;
+;changeFigure: -id=csm -next;
+;注意这里的视角，设置好位置，还要缩小，因为我们被推开了
+;角色名，留空以继承上句:对话 -fontSize=default;
+
+;角色名，留空以继承上句:对话 -fontSize=default;
+;setTransform: -target=卧室 -next;
+;setTransform: -target=csm -next;
+;上移
+;角色名，留空以继承上句:对话 -fontSize=default;
+;setTransform: -target=卧室 -next;
+;setTransform: -target=csm -next;
+;放大
+
+;setTransform: -target=卧室 -next;
+;setTransform: -target=csm -next;
+;右移
+;角色名，留空以继承上句:对话 -fontSize=default;
+;changeFigure:none -id=卧室 -next;
+;changeFigure:none -id=csm -next;
+
+;changeFigure: -id=jm -next;
+;changeFigure: -id=zql -next;
+;changeFigure: -id=mglb -zIndex=10 -next;
+;changeBg:海边;
+;角色名，留空以继承上句:对话 -fontSize=default;
+;changeFigure: -id=csm -next;
+;角色名，留空以继承上句:对话 -fontSize=default;
+;changeFigure:none -id=csm -next;
+;角色名，留空以继承上句:对话 -fontSize=default;
+
+
+;setAnimation:nod -target=mglb -next;
+;角色名，留空以继承上句:对话 -fontSize=default;
+;setAnimation:shake/RLshake -target=jm -next;
+;角色名，留空以继承上句:对话 -fontSize=default;
+;changeFigure:none -id=csm -zIndex=101 -next;
+;changeFigure:none -id=jm -next;
+;changeFigure:none -id=zql -next;
+;bgm:情深;
+;changeFigure:white -id=white -zIndex=0 -next;
+;角色名，留空以继承上句:对话 -fontSize=default;
+;setTransform: -target=mglb -next;
+;角色名，留空以继承上句:对话 -fontSize=default;
+;setTransform: -target=mglb -next;
+;放大mglb
+;角色名，留空以继承上句:对话 -fontSize=default;
+
+;bgm:none ;
+;角色名，留空以继承上句:对话 -fontSize=default;
+;changeFigure:none -id=csm -zIndex=101 -next;
+;changeFigure:none -id=white -duration=120 -next;
+;角色名，留空以继承上句:对话 -fontSize=default;
+;bgm:黑夜梦;
+;角色名，留空以继承上句:对话 -fontSize=default;
+
+;角色名，留空以继承上句:对话 -fontSize=default;
+;setAnimation:jump/bigjump -target=mglb -next;
+;setAnimation:jump/smalljump -target=jm -next;
+
+;角色名，留空以继承上句:对话 -fontSize=default;
+;bgm:none;
+;角色名，留空以继承上句:对话 -fontSize=default;
+;setTransform: -target=zql -next;
+;角色名，留空以继承上句:对话 -fontSize=default;
+;setTransform: -target=zql -next;
+;移出去
+;changeFigure: -id=csm -zIndex=101 -next;
+;角色名，留空以继承上句:对话 -fontSize=default;
+
+;bgm:黑夜梦;
+;角色名，留空以继承上句:对话 -fontSize=default;
+
+;setAnimation:quiver/light -target=csm -next;
+;角色名，留空以继承上句:对话 -fontSize=default;
+;changeFigure:none -id=csm -zIndex=101 -next;
+;角色名，留空以继承上句:对话 -fontSize=default;

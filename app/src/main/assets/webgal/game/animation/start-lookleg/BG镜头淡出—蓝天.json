@@ -1,0 +1,32 @@
+[
+
+  {
+    "alpha": 1,
+    "scale": {
+      "x": 4,
+      "y": 4
+    },
+    "position": {
+      "x": 0,
+      "y": 200
+    },
+    "blur": 0,
+    "duration": 50
+  }
+  ,
+  {
+    "alpha": 0,
+    "scale": {
+      "x": 4,
+      "y": 4
+    },
+    "position": {
+      "x": 0,
+      "y": 200
+    },
+    "blur": 0,
+    "duration": 600
+  }
+  
+
+]

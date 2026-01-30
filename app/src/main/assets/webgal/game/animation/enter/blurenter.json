@@ -1,0 +1,22 @@
+[
+  {
+    "alpha": 0,
+    "duration": 1200,
+    "blur": 30
+  },
+  {
+    "alpha": 0,
+    "duration": 1800,
+    "blur": 30
+  },
+  {
+    "alpha": 1,
+    "blur": 0,
+    "duration": 1800
+  },
+  {
+    "alpha": 1,
+    "blur": 0,
+    "duration": 2400
+  }
+]

@@ -1,0 +1,91 @@
+[
+	{
+
+		"position": {
+			"x": 806,
+			"y": 406
+		},
+		"duration": 16
+	},
+
+	{
+
+		"position": {
+			"x": 794,
+			"y": 406
+		},
+		"duration": 16
+	},
+
+	{
+
+		"position": {
+			"x": 794,
+			"y": 364
+		},
+		"duration": 16
+	},
+
+	{
+
+		"position": {
+			"x": 806,
+			"y": 364
+		},
+		"duration": 16
+	},
+
+	{
+
+		"position": {
+			"x": 806,
+			"y": 406
+		},
+		"duration": 16
+	},
+
+	{
+
+		"position": {
+			"x": 794,
+			"y": 406
+		},
+		"duration": 16
+	},
+
+	{
+
+		"position": {
+			"x": 794,
+			"y": 364
+		},
+		"duration": 16
+	},
+
+	{
+
+		"position": {
+			"x": 806,
+			"y": 364
+		},
+		"duration": 16
+	},
+
+	{
+
+		"position": {
+			"x": 806,
+			"y": 406
+		},
+		"duration": 16
+	},
+	{
+
+		"position": {
+			"x": 800,
+			"y": 400
+		},
+		"duration": 16
+	}
+
+]

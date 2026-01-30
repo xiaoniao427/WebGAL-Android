@@ -1,0 +1,359 @@
+playEffect:開演ブザー.mp3 -id=error;
+intro:终章。|白金奖杯后后后后—-=~-`-她----·+·=—你~·—+的游+—~戏—~-生活未++—来他—————— -fontSize=medium -backgroundColor=rgba(0, 0, 0, 1) -fontColor=rgba(255, 255, 255, 1) -animation=fadeIn -delayTime=1500;
+playEffect: -id=error;
+bgm:与你之祀-温馨一些.mp3 -enter=2400 -next;
+changeBg:尘埃海/尘埃海.png;
+playEffect:wave4.mp3 -volume=40 -id=wave;
+厝述:“....”;
+:“混沌黑暗的海。”;
+:“浪夹着碎光缓缓翻卷。”;
+:“沉入海里的，很快就没了光影。|海浪继续翻卷。”;
+:“海浪一次次带走光的一幕幕是少女看惯的景象。”;
+:“她总是靠这一循环的景象陷入沉思。”;
+changeFigure:cm/cm1-close.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+playEffect: -id=wave;
+厝述:“唉...”;
+changeFigure:cm/cm1-sign.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“真是一个悲伤的故事。”;
+changeFigure:cm/cm2-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:但真的是这样吗？这个故事的真实性仍然存疑。;【2t】
+changeFigure:cm/cm2-t2.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“毕竟，相比我过去的认知来讲实在是相差太悬殊了。”;【2t2】
+changeFigure:cm/cm2-se.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:但是，假如是真的，那份不安感究竟意味着什么？我有些不敢想象。;【2se】
+厝述:如果是假的，似乎就无所谓了。;【2se】
+changeFigure:cm/cm2-close.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“可是....”;【2close】【根本不像盐哒】
+changeFigure:cm/cm1-n.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+setAnimation:smalljump/y400small-jumping -target=cm -next;
+厝述:“...算了算了，不想了。”;【1n】
+changeFigure:cm/cm1-e.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“毕竟昨晚———还有今天凌晨并不只有这些令人心烦的事嘛。”;【1e】
+changeFigure:cm/cm1-e2.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“自从把这个家伙带到我家后，这是第几天——不对，第几个月了？”;【1e2】
+changeFigure:cm/cm2-s3.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“呵呵~终于有反应了，终于开口说话了...”;【2s】
+changeFigure:cm/cm2-e2.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“虽然还没有完全达到我的目的，但是，攻略已经不成问题了。”;【2e】
+changeFigure:cm/cm2-s2.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“好开心...这么久的努力没有白费，还好我没放弃。”;【2s3】
+changeFigure:cm/cm2-shy.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“唔....”;【2shy】
+changeFigure:cm/cm1-shy2.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“....”;【1shy2】
+厝述:“只是，为什么我总感觉我自己和一开始相比有些不一样...”;
+changeFigure:cm/cm1-shy.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“呼...”;【1shy】
+changeFigure:cm/cm2-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“我该不会是不小心把自己也攻略了吧...”;【2t】
+changeFigure:cm/cm2-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“这可是大忌啊，怎么能动真情？要是这件事传出去，可比「人类世界派来的逗逼双马尾内奸」严重多了。”;【2t】
+changeFigure:cm/cm2-e.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“毕竟我还是个优秀生。”;【2e】
+？？:“欸嘿嘿嘿嘿哼噗噗噗喵哇啊！！出大问题了，你怎么在这儿？”;
+changeFigure:cm/cm1-n.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“我一直都喜欢在这儿看——”;【1n】
+changeFigure:cm/cm1-o.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“....”;【1o】
+bgm: -enter=2400;
+changeFigure:cm/cm2-se.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“诶！谁？！”;【2se】
+changeFigure:kzcs/kc/kc-sign.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+bgm:在你面前的犹豫.mp3 -enter=3600;
+;【music 疑虑的】
+changeFigure:cm/cm1-se.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“....”;【2se】
+changeFigure:cm/cm1-se2.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:这家伙什么时候来的？我说的话她没有偷听去吧？刚刚那事可不是闹着玩的。;【2no】
+kzcserin:“唉，我的见述技巧还是不成熟...”;
+bgm: -enter=1200;
+changeFigure:cm/cm1-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:等一下，这家伙，怎么看着有点熟悉？;【1t】
+changeFigure:kzcs/kc/kc-e.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+setAnimation:nod/x800y400-nod -target=kc -next;
+kzcserin:“那部分人人都爱看的场景我竟然没有见述出来！！明明是很美妙的一晚，那可是爱的艺术！！！”;【e】
+changeFigure:cm/cm2-a.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“啊！你不会是抱枕上的那个家伙吧？”;【2a】
+bgm:可以改变世界的第一可爱.mp3 -enter=2400;
+changeFigure:kzcs/kc/kc-sh.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+kzcserin:“哦哦！被认出来啦，看来你也有我的抱枕呀！要签名吗？虽然签名我还没练呢~哈哈~”;【sh】
+changeFigure:cm/cm1-gg.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+厝述:“呃哈哈...”;【2gg】
+changeFigure:思考.png -zIndex=5 -id=think -next;
+changeFigure:cm/cm1-gg.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=6;
+厝述:我才没有那玩意。;【1gg】
+changeFigure: -zIndex=5 -id=think -next;
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+kzcserin:“嗯嗯，既然认识我，那么见述的基本位置就没有搞错...至少那一段线没有跳过去。”;【t】
+changeFigure:cm/cm1-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:「见述」？那是什么魔法？只看名字的话不像是导引魔法，可也不太像另外两种，难道是不外传的种族魔法？;【1t】
+kzcserin:“唔...”;【1t】
+changeFigure:cm/cm1-t3.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:那么这家伙是哪族的？我看看...女仆装，挺可爱的不对...;【1t2】
+setAnimation:nod/x800y400-nod -target=kc -next;
+changeFigure:cm/cm1-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+kzcserin:“唔唔唔...那该怎么办呢...”;【1t】
+changeFigure:cm/cm1-t2.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:...猫耳，原来是——不对，没有尾巴...;
+changeFigure:cm/cm2-a.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure:kzcs/kc/kc-se2.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:而且...穿得...真严实啊，穿成这样去学校是要被赶回家换衣服的！;
+changeFigure:cm/cm1-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:总不可能.....难道不是星埃魔？;
+changeFigure:kzcs/kc/kc-se.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+kzcserin:“厝述，你还记得昨晚的事情吗？或者说今天凌晨的。”;【se】
+厝述:难道是「人类」？不对，在这里的「人类」一定会有他的星埃魔主人在附近，总不能是类似我家里的那位？;
+changeFigure:cm/cm1-o.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“嗯？记得啊，我和——”;【1o】
+changeFigure:cm/cm2-a.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+bgm: -enter=3600;
+厝述:她竟然知道我的名字？;【2a】
+changeFigure:cm/cm1-gg.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:不会是托了「人类世界派来的逗逼双马尾内奸」黑红的福吧？;
+changeFigure:kzcs/kc/kc-se2.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+changeFigure:cm/cm1-o.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+kzcserin:“记得非常清楚吗？”;【se2】
+changeFigure:cm/cm2-shy2.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+厝述:“当然...毕竟是很重要的事——”;【2pie】
+changeFigure:cm/cm1-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:“...”;【1t】
+changeFigure:cm/cm2-t2.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:“等等，记忆好像真的有些模糊...|就像断掉了一样。” -fontSize=small;
+bgm:在你面前的犹豫.mp3 -enter=2400;
+changeFigure:kzcs/kc/kc-se.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+changeFigure:cm/cm2-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+kzcserin:“看来是真的「跳过」了....但是能不能挽救还不确定。” -fontSize=medium;
+changeFigure:kzcs/kc/kc-se2.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+kzcserin:“咳咳，你有没有看见过未来？或者说是过去没有经历过的故事。”;【se2】
+changeFigure:cm/cm1-a.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:“欸？什么？”;【a】
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+kzcserin:“未来，你可以看见自己的未来么？比如你的梦想实现时的场景，你死亡的场景，亦或者别人的未来。”;【t】
+changeFigure:cm/cm1-close.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:“我不擅长时间魔法，而且因为未来的无限性，我们看到的未来不一定就是「我们的未来」——”;
+bgm: -next;
+changeFigure:cm/cm1-p2.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -zIndex=10 -next;
+changeFigure:kzcs/kc/kc-a.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+changeFigure:转场图/BGwarm1.png -id=zc1 -transform={"scale":{"x":3.5,"y":3.5},"dotFilm":1,"reflectionFilm":1,"glitchFilm":1} -next -zIndex=17;
+setTextbox:hide;
+changeBg: -next;
+;setTransform:{"scale":{"x":3.5,"y":3.5},"alpha":0.8,"blur":50,"dotFilm":1,"reflectionFilm":1,"glitchFilm":1} -target=zc2 -duration=100 -next;
+;setTransform:{"scale":{"x":3.5,"y":3.5},"alpha":0.8,"blur":50,"dotFilm":1,"reflectionFilm":1,"glitchFilm":1} -target=zc1 -duration=100 -next;
+setAnimation:mediumjump/x800y400medium-jumping -target=kc -next;
+setAnimation:rotation/fastBG-rotation -target=zc1 -next;
+changeFigure:转场图/BGwarm1.png -id=zc3 -transform={"scale":{"x":3.5,"y":3.5},"dotFilm":1,"reflectionFilm":1,"glitchFilm":1} -next -zIndex=11;
+changeFigure:转场图/BGcold1.png -id=zc4 -transform={"scale":{"x":3.5,"y":3.5},"dotFilm":1,"reflectionFilm":1,"glitchFilm":1} -zIndex=11 -next;
+;【hide 厝述 kzcserin 章节过场动画，疯狂旋转的图片，分裂，电影效果控件】
+setAnimation:quiver/xy1most-heavy-quiver -target=cm;
+
+厝述:“呜——”;【1close】
+setTextbox:on;
+setTextbox:hide;
+setTransform:"position":{"y":1000},"scale":{"x":1.5,"y":1.5} -target=cm -duration=600;
+changeFigure:色图/black.png -id=black -zIndex=13;
+changeFigure: -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+changeFigure: -id=zc1 -transform={"scale":{"x":3.5,"y":3.5},"dotFilm":1,"reflectionFilm":1,"glitchFilm":1} -next -zIndex=11;
+changeFigure: -id=zc2 -transform={"scale":{"x":3.5,"y":3.5},"dotFilm":1,"reflectionFilm":1,"glitchFilm":1} -zIndex=11 -next;
+changeFigure: -id=zc3 -transform={"scale":{"x":3.5,"y":3.5},"dotFilm":1,"reflectionFilm":1,"glitchFilm":1} -next -zIndex=11;
+changeFigure: -id=zc4 -transform={"scale":{"x":3.5,"y":3.5},"dotFilm":1,"reflectionFilm":1,"glitchFilm":1} -zIndex=11 -next;
+playEffect:put_cardboard_box.mp3;
+:“....”;
+setTextbox:on;
+:“...........”;
+bgm:空无的未开辟-一点空无感.mp3 -enter=3600;
+厝述:“呜...”;
+厝述:这...突然...发生了什么...;
+playEffect:waves_on_beach1.mp3 -volume=40 -id=wave2;
+厝述:...还是海浪声。;
+厝述:但我怎么突然倒下了？;
+厝述:...而且...这是沙？;
+playEffect:walking_on_the_gravel_2s.mp3 -next;
+changeBg:海边/海边-上午-blur.png -transform={"brightness":0.5};
+changeFigure:cm/cm1-close.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+changeFigure: -id=black -zIndex=13;
+changeFigure:cm/cm1-o.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:还是海...虽然有些模糊...;
+;【模糊的海边】
+;【show 厝述】
+changeFigure:cm/cm2-o.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:可就算模糊，这海水的颜色和尘埃海相比差别太大了....;【1o】
+changeFigure:cm/cm1-kh.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:所以这是哪里？;
+playEffect: -volume=50 -id=wave2;
+changeFigure:cm/cm1-pie.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:“喂，你知道————”;
+setTextbox:hide;
+changeFigure:cm/cm1-se2.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -zIndex=10;
+changeFigure:cm/cm1-t2.png -id=cm -transform={"position":{"y":400},"scale":{"x":-1.5,"y":1.5}} -zIndex=10;
+changeFigure:cm/cm2-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -zIndex=10;
+;【show 槛芒】
+厝述:欸？！那个穿女仆装的怎么没了？;
+setTextbox:on;
+;【遇见槛芒修改】
+changeFigure:jm/jm1-close2.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+changeFigure:cm/cm2-a.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+setAnimation:bigjump/y400big-jumping -target=cm -next;
+playEffect:decision39（摸一摸）.mp3;
+厝述:槛芒？！;【2a】
+changeFigure:cm/cm1-close.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+setAnimation:shake/lightRLshake -target=cm -next;
+厝述:不对不对，是游戏里的槛芒，再怎么说现实也不该——;【2pie】
+changeFigure:jm/jm1-o2.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+changeFigure:cm/cm2-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:不对，如果那个游戏是真的，是现实的。;【1t】
+changeFigure:cm/cm1-t2.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:现在是现实吗？刚刚那家伙嘟囔的未来，难道现状与这件事有关？;【1t2】
+changeFigure:jm/jm3-close.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+changeFigure:cm/cm1-close.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:没有充足的信息，但为了理清现状，只能暂且认为都有联系...|那样的话。;
+changeFigure:cm/cm2-se.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:...现在是未来？;【1se】
+changeFigure:jm/jm2-o.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+槛芒:“「再见」，我们+=—-—+——这样用的吗？”;【2o】
+changeFigure:cm/cm2-se.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:不对，假如是现实，既然界槛以她的星埃为核心，她怎么可能站在这里？;【se2】
+changeFigure:cm/cm1-se2.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:除非界槛被毁掉，但那怎么可能？;
+changeFigure:cm/cm1-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:难道是过去？;【】
+changeFigure:jm/jm1-o2.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+槛芒:“那几个月，我们每次—*—·-/--·/”;【2o】
+changeFigure:cm/cm1-o.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:算了，先听听她在说什么。|用时间魔法进行观测是基本的常识。;【2se】
+changeFigure:cm/cm2-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:说不定，这次是一个时间结扣，不小心把我也牵连进去了吧。;【2se】
+changeFigure:cm/cm2-sign.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:唉，总是有笨蛋星埃魔想尝试使用时间魔法去改变另一个时间维度的世界。;【2se】
+changeFigure:cm/cm1-pie.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:明明都规定好了只能观察不能改变，可就是有人不听，希望这次只是我凑巧遇到吧，毕竟我不擅长时间魔法，感知没那么强。;
+changeFigure:jm/jm2-close.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+槛芒:“—-=/--·-=/-再见」吗？”;【2close】
+changeFigure:cm/cm2-close.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:“....”;【2close】
+changeFigure:jm/jm1-o2.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+槛芒:“你在玩完我修改的—-=—=+·~—再见了—=—--/+·~惯例。”;【1o】
+changeFigure:jm/jm1-o-tear.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+槛芒:“为什么你——”;【3o】
+changeFigure:cm/cm1-t.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:「你」？还有其他人在吗？;【1t】
+changeFigure:jm/jm3-o2.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+槛芒:“不对——+--+--~-==·=。|一直都是，我在说...”;【3o】
+changeFigure:cm/cm1-sign.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:虽然听不全....但我能感到氛围好沉重，和那个游戏有得一拼了。;【1sign】
+changeFigure:jm/jm1-close2.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+槛芒:“...”;【3o】
+changeFigure:jm/jm2-o.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+bgm: -enter=6000;
+槛芒:“好了...我们走—=·~—”;【2o】
+changeFigure:cm/cm1-o.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:“....”;【pie】
+changeFigure:cm/cm1-close.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+changeFigure:jm/jm2-o.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+槛芒:“啊...我应该像他—-=+*—0=--笑。”;【1tn】
+bgm:Echoes of Heaven.mp3 -enter=2000;
+changeFigure:cm/cm2-o.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:“....”;【pie】
+changeFigure:cm/cm2-kh.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+changeFigure:jm/jm2-tn.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+槛芒:“_...还是该这样笑？”;【1tn】【c??】
+槛芒:“...”;【1tn】【c??】
+厝述:“.....”;【a】
+changeFigure:cm/cm1-a.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:“欸？你在跟我说话吗？”;【a】
+;【红屏】
+changeFigure:jm/jm1-kh.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"blur":15} -next -zIndex=10;
+setAnimation:nod/x-800y400-nod -target=jm -next;
+槛芒:“？？”;【3kh】
+changeFigure:cm/cm2-ah.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+setAnimation:smalljump/y400small-jumping -target=cm -next;
+厝述:“！！”;【a2】
+;【show kzcseri nc】
+changeFigure:kzcs/kc/kc-dy.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+kzcserin:“你这是突然跑去哪了？！”;【dy】
+changeFigure:cm/cm1-o.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:“....”;【o】
+changeFigure:jm/jm2-o.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+changeBg:海边/海边-上午.png;
+槛芒:“.....”;【2o】
+changeFigure:kzcs/kc/kc-o.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+kzcserin:“....”;【o】
+changeFigure:jm/jm1-o2.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+changeFigure:kzcs/kc/kc-close.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+bgm: -enter=2000;
+kzcserin:“....”;【o】
+changeFigure:kzcs/kc/kc-kh4.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+changeFigure:cm/cm1-kh.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;;【cs ??】
+厝述:“嗯....”;【o】
+bgm:开花太阳.mp3 -enter=2400;
+changeFigure:jm/jm3-kh.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+changeFigure:kzcs/kc/kc-a.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+kzcserin:“啊啊啊啊啊啊啊啊啊————————”;【3jm ??】【kzaaa】
+setAnimation:bigjump/x800y400big-jumping -target=kc -next;
+changeFigure:kzcs/kc/kc-aaa.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+kzcserin:“卧槽卧槽你怎么活了？！？！我所见述的那段散束线你不应该是...”;【kz a】
+setAnimation:quiver/800xy1most-heavy-quiver -target=kc -next;
+changeFigure:cm/cm1-a.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;;【cs ??】
+changeFigure:jm/jm3-ts.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+changeFigure:kzcs/kc/kc-se.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+槛芒:“...”;【2槛芒 ts】
+changeFigure:kzcs/kc/kc-no.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+changeFigure:jm/jm3-o2.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+kzcserin:“啊啊！不要打我哇！”;【no】【cs a】
+changeFigure:kzcs/kc/kc-no2.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+changeFigure:jm/jm1-o.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+changeFigure:cm/cm2-kh.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;;【cs ??】
+kzcserin:“我我我我不是主动想要见述那条线的！这这这这都是散束线的错！”;【厝述&槛芒 ？？】【kz no2】
+changeFigure:cm/cm1-gg.png -id=cm -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;;【cs ??】
+厝述:“现在到底是什么情况？”;【gg】
+changeFigure:kzcs/kc/kc-no3.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=3;
+changeFigure:jm/jm3-kh.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+changeFigure:kzcs/神秘抱枕.png -id=pkc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=4;
+kzcserin:“啊啊不管了！总总总总之先中止再说！”;【kz no3】
+changeFigure:jm/jm1-o2.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+:“kzcserin掏出了一个抱枕皮，骑了上去。”;【a】
+playEffect:cute-motion1（摸一摸2）.mp3;
+changeFigure:kzcs/kc/kc-sh.png -id=kc -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=5;
+setAnimation:quiver/800xy1most-quick-quiver -target=pkc;
+playEffect:shocking_beam.mp3 -next;
+setTransform:{"position":{"x":800,"y":-3000}} -target=kc -duration=600 -next;
+setTransform:{"position":{"x":800,"y":-3000}} -target=pkc -duration=600;
+;【飞起】
+:（呋哟————————）;
+;【black】
+setTransform:{"position":{"x":600,"y":400},"scale":{"x":1.5,"y":1.5}} -target=cm -duration=600 -next;
+changeFigure:cm/cm2-a3.png -id=cm -transform={"position":{"x":600,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;;【cs ??】
+changeFigure:jm/jm3-a.png -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+厝述:“喂，这到底发生了——不对，这个音效是抱枕能发出的吗？!”;
+changeFigure:色图/black.png -id=black -zIndex=20;
+setTextbox:hide;
+changeFigure: -id=cm -transform={"position":{"x":600,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;;【cs ??】
+changeFigure: -id=jm -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next -zIndex=10;
+
+kzcserin:“呼...”;
+setTextbox:on;
+changeBg: -next;
+changeFigure: -id=pkc -next;
+changeFigure: -id=kc -next;
+kzcserin:“没想到见述者也是一高危行业。”;
+kzcserin:“风太大了，还是待在抱枕里面吧。”;
+playEffect:cute-motion1（摸一摸2）.mp3;
+kzcserin:“呼~喝口茶，压压惊。”;
+kzcserin:“好喝，虽然是隔夜茶。”;
+kzcserin:“不要计较抱枕里能不能喝茶这个问题啦~”;
+kzcserin:“话说...这下该怎么办。”;
+kzcserin:“由于我的不成熟，我所见述的线出现了一些混乱！”;
+kzcserin:“哇啊，为什么让我见述这条线啊？我明明是一个那么乐观的人。”;
+kzcserin:“呼，冷静，回忆一下典伺教给我的...”;
+kzcserin:“咳咳，首先要做的不是继续见述，而是停下来分辨脉络。”;
+kzcserin:“...”;
+kzcserin:“.....哼噗喵...”;
+kzcserin:“....这样啊..”;
+kzcserin:“看来我们几人果然还是不够的，必须有其他见述者作为参照，否则很难测量散束距。”;
+bgm: -enter=3600;
+kzcserin:“事已至此，只能提前做这件事了。”;
+kzcserin:“这一天终于来了！！”;
+kzcserin:“虽然转折得有些生硬，但没有办法呐~”;
+kzcserin:“屏幕前的见述者们，不要眨眼哦~”;
+setTextbox:hide;
+changeScene:见述者茶室-速通版.txt 

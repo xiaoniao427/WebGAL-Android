@@ -1,0 +1,297 @@
+intro:见述者茶室~ -fontSize=large -backgroundColor=rgba(255, 255, 255, 1) -fontColor=rgba(255, 179, 179, 0.43) -animation=slideIn -delayTime=1500;
+changeFigure:色图/black.png -zIndex=20 -id=black;
+bgm:可以改变世界的第一可爱.mp3 -enter=2400 -next;
+changeBg:见述者茶室/见述者茶室.png;
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":0};
+changeFigure:kzcs/神秘抱枕.png -transform={"position":{"y":800},"scale":{"x":3,"y":3}} -id=kc2;
+changeFigure:kzcs/kp/kp-close.png -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure:kzcs/kf/kf-close.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure: -zIndex=20 -id=black;
+setTextbox:on;
+神秘抱枕:“欢迎来到见述者茶室...”;kc
+神秘抱枕:“速通版！！！”;kc
+changeFigure:kzcs/kf/kf-n.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“...”;kf
+changeFigure:kzcs/kp/kp-n.png -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“.........”;kp
+setTransform:{"position":{"y":400},"scale":{"x":1.5,"y":1.5}} -target=kc2 -duration=0;
+Kzcserin:“欸？你们这样看着我干嘛？”;kc
+changeFigure:kzcs/kf/kf-close.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“哈...哈...”;kf
+changeFigure:kzcs/kp/kp-close.png -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“既然是速通版，就快办正事。|毕竟..我们的时间.....”;kp
+changeFigure:kzcs/kf/kf-n.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“是啊，已经走了一个，甚至都没机会出场。”;kf
+changeFigure:kzcs/kp/kp-n.png -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“计划和大家见面准备的三万多字的内容又要重写了...”;kp
+神秘抱枕:“哎，我知道是我的错...假如我能规划好时间...”;kc
+changeFigure:kzcs/kf/kf-close.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“是啊，假如你能规划好时间，我们就不用共穿一个身子了！这个游戏的演出全部让他来做，就能更加优秀了。”;kf
+神秘抱枕:“别这么说，我不是想了一个替代方案嘛？只不过被你们集体否决了...”;kc
+changeFigure:kzcs/kf/kf-n.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“你是指这个吗？！！！”;kf
+changeFigure:kzcs/融合.png -transform={"position":{"x":400,"y":400},"scale":{"x":1.5,"y":1.5}} -id=!@# -duration=1200;
+setTransform:{"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":0,"rotation":90} -target=kc2 -duration=2400 -next;
+setTransform:{"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1,"rotation":6} -target=kc -duration=1200 -next;
+Kzcserin:“啊啊啊!！你真展示出来啊！！！”;kc
+changeFigure:kzcs/kf/kf-close.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure: -transform={"position":{"x":400,"y":400},"scale":{"x":1.5,"y":1.5}} -id=!@# -duration=1200;
+Kzcserin:“终于变回来了。”;kf
+changeFigure:kzcs/kp/kp-close.png -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“这叫原形毕露。”;kp
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“欸嘿哼噗喵~”;kc
+changeFigure:kzcs/kf/kf-n.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“反正没面子的只有你，毕竟我们共用一个名字。”;kf
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“嗯，谢谢你们愿意为了这个事业隐藏起自己的真名正体...”;kc
+changeFigure:kzcs/kf/kf-close.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“好了好了，你的感谢温柔理解我们已经听得很腻了，快处理正事。”;kf
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“咳咳，好吧~”;kc
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“大家好吖~非常感谢诸位同志能够玩到这里！因为那个人的离开加上时间的原因我没有做出最好的演出！如果遇到bug实在有劳大家了！”;kc
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“然后！再说一声抱歉，毕竟我相信不少人内心期待的是这个故事的后续！很明显嘛！和我们一起玩游戏的厝述，她和主角的故事这个时候才刚刚开始！你们一定抱有对这一情节的期待才决定再次点击开始游戏的吧！结果要让你们失望啦~”;kc
+changeFigure:kzcs/kp/kp-n.png -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“嗯，这部分的内容，我只写下了约三万字的初稿。|你们应该不是在期待邹丘凌还会有情感上的反转吧？”;kp
+changeFigure:kzcs/kf/kf-n.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“这部分的插画...|呃，文件夹也没有建！”;kf
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“情况就是这样啦~”;kc
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“毕竟，我们这几个人，只是因为千载难逢的偶然缘分才聚在一起决定做散束线的，我们每个人的生活的忙碌程度都不一样，时间也很难统一...能做到目前这个程度，而不至于所有人都因生活而放弃并离开导致彻底项目烂尾无法发售，已经很好了...毕竟这种情况实在是太多了...”;kc
+changeFigure:kzcs/kf/kf-close.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“煽情煽得不错嘛~虽然我觉得很大一部分原因是因为我们都是在用爱发电.....”;kf
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“啊啊！主美大姐姐大人嘴下留情！！”;kc
+changeFigure:kzcs/kf/kf-n.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“呵呵~我只希望你以后可以像我一样感受到上班疲惫麻了一整天后回家做饭打扫卫生结果意识到必须抓紧画画的同时进行公司社交反刍的痛苦...边骂边画...”;kf
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“呜呜~骂就骂吧！假如能让你消消气！为了所有人的散束线！！”;kc
+changeFigure:kzcs/kf/kf-close.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“没事，你是个有礼貌的好孩子，我骂的不是你，不然我早走了。|当然了，还是因为我们那个都能够产生共鸣的梦想。”;kf
+changeFigure:kzcs/kp/kp-close.png -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“嗯。”;kp
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“哈哈...谢谢。”;kc
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“现在，就让我们「发现」散束线吧！”;kc
+;绝对不能写“诞生”，因为散束线已经存在
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“啊，屏幕前的你也是其中一员！|我们没有先后，没有创始也没有结束，只要诞生存在，胜利就已经属于我们了。”;kc
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“而在知晓了何为散束线后，我坚信这也能够帮助大家去衍伸这一切的故事，没错，无论是槛芒的，还是三人的。”;kc
+changeFigure:kzcs/kp/kp-n.png -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+bgm: -enter=5400 -next;
+Kzcserin:“或这样说，任何人都可以作为和我们一样的——无限线的见述者之一——去衍伸。|比如这一刚刚算是结束了的故事，任何见述者让槛芒拥有一个美好的结局，至少活下来，而非现如今...”;kp
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“好的好的打住，不能让氛围变得太悲重啦~”;kc
+changeFigure:色图/white.png -id=white -next;
+changeFigure: -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure: -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+changeFigure: -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“首先来看我手里的这张A4的大白纸。”;kc
+;Ssx1
+changeBg:ssx/ssx1.png;
+changeFigure: -id=white -next;
+bgm:幻想与前行.mp3 -enter=5400 -next;
+Kzcserin:“这个，就是散束线！或者说，这是散束线的一部分，而这一部分，既可以说是一小部分，也可以说是一大部分。”;
+Kzcserin:“为什么这么说呢？因为散束线是无限线！无限延伸，永旭的永续前进。”;
+Kzcserin:“太抽象了？当然，若没有一些帮助就去直接观察测量散束线的话，只会看到这样啦~”;
+Kzcserin:“啊，差点忘了很重要的一点，这是我自己去观察测量散束线时得到的结果。不同人进行观察和测量都会有不同的结果。”;
+;Ssx2
+changeBg:ssx/ssx2.png;
+Kzcserin:“比如这位就是我们的主美所观察到的。一看就是搞艺术的！|啊对，她所观察的颜色是不一样的，这很正常。” -fontSize=default;
+Kzcserin:“怎么不叫姐姐大人了？”;
+
+;Ssx3
+changeBg:ssx/ssx3.png;
+Kzcserin:“这位是咱们的剧情老师观察到的。嗯，不仅抽象还很谜语~我喜欢！” -fontSize=default;
+Kzcserin:“抱歉，不太会画。”;
+Kzcserin:“但我能理解！”;
+changeBg:ssx/ssx1.png;
+;Ssx1
+Kzcserin:“总之，散束线是由无数个分叉发散螺旋的线，许许多多的线和线之间又是偏移回环，一轮一轮旋转着，交错着，络绎着组成的！|这就是它们的偏回轮转。”;
+Kzcserin:“现在，让我们借助一些帮助...观察这些线，不然的话，观察测量都做不到的话对于我们人类而言还有什么意义呢？它们从来不是不可被观察的。”;
+changeBg:ssx/ssx4.png;
+Kzcserin:“就是这样，发现这些灰色的点了吗？这就是同这两者的力量共源的第三者的力量。”;
+Kzcserin:“通过它的力量，我们就可以精准定位无限线上的无限一点...|能够借助这种力量的人便是「见述者」。”;
+Kzcserin:“之后啊...”;
+Kzcserin:“故事就可以开始了。能够被人们读懂了。” -fontSize=default;
+changeFigure:cs/cs2-s.png -id=cs -transform={"position":{"x":-1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure:ps/ps2-n.png -id=ps -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1} -next;
+changeFigure:dc/dc2-wink.png -id=dc -transform={"position":{"x":-400,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure:jm/jm1-ts.png -id=k/jm -transform={"position":{"x":700,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure:cm/cm1-dz.png -id=cm -transform={"position":{"x":1200,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“她们，和他们。|啊，既然都展示了槛芒的正体，邹丘凌的正体没有画所以就不展示了。” -fontSize=default;
+
+changeFigure: -id=cs -transform={"position":{"x":-1000,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure: -id=ps -transform={"position":{"y":-400},"scale":{"x":1.5,"y":1.5},"alpha":1} -next;
+changeFigure: -id=dc -transform={"position":{"x":-600,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure: -id=k/jm -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure:cm/cm1-gg.png -id=cm -transform={"position":{"x":1000,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+bgm: -enter=5400;
+Kzcserin:“当然了，既然都有星埃魔厝述了，他们三人的形态很明显不是唯一的，只是同名，或许在某段线上就有双开门霸总厝述喜欢上了大尾巴福瑞典伺，来自M87星云的高达战士平潵听到这个消息后立即掏出任意门御门飞行来给他们做伴郎....结果因为赶来的太急忘带红包只能在饭场靠挡酒来表达歉意最终不小心——” -fontSize=default;
+
+
+changeFigure: -id=cm -transform={"position":{"x":1000,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“可以了可以了，我想他们已经能理解了。一句话，形态是由见述者们各自观察到的所确定的，不存在任何一个真正的原本的样子。”;
+Kzcserin:“就是这样的力量，仅是这样的力量，已经确定好的绝对存在的可能性。”;
+bgm:可以改变世界的第一可爱.mp3 -enter=5400;
+changeBg:见述者茶室/见述者茶室.png;
+changeFigure:kzcs/kp/kp-n.png -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1} -next;
+changeFigure:kzcs/kf/kf-n.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“差不多就这些吧？我们接收到的线波，总结下来就是这样的。”;
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“不过很明显，这还不够，这些线里也有比较独特的存在，对于它们来说不算寻常，但对我们人类来讲必须要认识和定义归类。”;
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“比如刚刚结束了一部分的故事，就属于「断碎线」的一部分，说是断碎，并不是字面上碎屑的含义，而是区别于「中线」的故事。”;
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“「中线」也并非字面上中间的含义，而是该见述者所能观察到的所有线中都存在的一部分。”;
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“打个比方，这位见述者见述了两个世界观完全不同的线，这两个世界不曾有联系，但这位见述者的中线，能够联系起这两条线，这两条线都有他的影子。”;
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“没错，中线是随见述者不同而不同的故事，是最有该见述者独特个性的线，绝不是唯一的绝对的「中间」，没有任何一个见述者的中线可以强迫其他见述者的中线同他计算相对谁更「中间」，那是伪命题。”;
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“我想想接下来该说什么呢？是不亚于上面这段的，同样很重要的。”;
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“我明白了，既然说完了散束线，该轮到我们「见述者」和其关系了！”;
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“那就是——任何人都可以作为见述者借助散束线去创作属于自己的一切。”;
+Kzcserin:“用更平易近人进行解释的话，就让我按照作为一个二次元经常接触的事情来试试吧。”;
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“可以理解为，我们，都是，在给散束线做二创,但是！！”;
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“从来不存在，有先于任何见述者之前的「原创」！！”;
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“比如我..不对是我们,我们就很有可能被「誉为」散束线的创始者或原创者，那种话是扯淡的，不要信，任何说我们是散束线创始者的都是诈骗！我们和其他见述者的区别，只是运气好一些，比较早的收到了线波并鼓起勇气和意志表达出来了而已，从没有先后主随的区别，何况我还穿着女仆装！”;
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“不同人借用散束线进行的不同创作，都是属于每一个见述者的原创。但一种情况除外，是在一个见述者的原创之下进行的二创改编，那样子需要经过原创者的同意。”;
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“比如，假如有人想要为《魅魔gal》做商业二创，需要经过我们的同意，但是！！”;
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“虽然在这儿插入有点不合适我必须要先说出来！”;
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“《魅魔gal》,也就是你现在正在玩的这个游戏，它的改编权完全开放，想怎么改就怎么改，不用给我们付一分钱也不用问我是否同意，我也准备将本作所有的立绘资源（包括一笔一笔绘制出的sai2源稿）作为免费可商用的素材分享给大家！这就是前面我们所说的。不过我自己的立绘...哈哈，这个到时候再说啦~”;
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“可以不用顾忌我们所见述的槛芒的结局，去发挥你的可能性，创作一个美好的，在位置上和我们是平行的结局。|作为你的原创。”;
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“你就算没有想法去衍伸散束线或者槛芒的故事也不要紧，就算印在外卖包装盒上，写上「魅魔来袭！」也是完全可以的！”;
+changeFigure:kzcs/kp/kp-close.png -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“假如槛芒真能够回来的话...”;
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“我的天，你这一刀打出真伤了啊！”;
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“不过假如有人想制成亚克力立牌并标榜正版甚至贴标赚钱的话...哎呀我只希望他有一个称作正版的理由...至少做一个改编...写个支线什么的，然后发表出来再做立牌...”;
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“总之，「散束线间的偏回轮转」这个商标，可以说是公共领域的ip，开源的ip。”;
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“使用起来也很简单，在你的作品名字前加上就好。”;
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“在各种各样的断碎线和中线作品的标题前面加上这个商标的前提条件只有一个，必须要有厝述平潵典伺这三者的出现，哪怕是作为路人。”
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“像是《散束线间的偏回轮转-=-—断碎线-==·~-枇杷露可乐兑着喝~=》，或《散束线间的偏回轮转--~·—断碎线—=->—十连每次都出金。》，这就是两位见述者对该商标的正确用法，这两个的作品都属于他们自己的原创。”;
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“哦，游戏的标题可以把前面那一串省略，只写后面的，为了美观嘛。”;
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“最后，打一个比喻来解释吧！可能有点长，记得通过回想功能来看哦喵~”;
+Kzcserin:“对于我们见述者来讲，散束线是一条纵横交错的街道，谁都可以在这条街道上借着它们的永明的路灯摆摊卖任何东西，但是任何人都不可以来收租费甚至是保护费，你的摊子是你的，他的摊子是他的，而我们的摊子在地图上被定位时，总是要先定位在散束线这条街道，要来我们任何一人的摊子前，游览完任何一人的摊子后，都要不可避免的经过任何一位见述者的摊子。”;
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“啊，我们是推行门前三包制度的，同志们可要照顾好自家的摊子，一旦出事的话...嗯，一条街上的人都会被牵连呀~当然，如果能够互帮互助就是最好的。”;
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“不过，人们能够客观认清到每一个见述者属于一个集体的同时也是一个个体是最重要的，不然就会有一种情况，有人会以见述者A为目标，在攻击他时用诡辩谲词实现对见述者集体的攻击，之后，他就可以在他营造的群体观点的基础上，来攻击他真正的目标——属于见述者集体的见述者B...”;
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“还有一个很重要的点，需要告诉我们他国的见述者朋友，我目前的外语实力不足以支撑我翻译散束线的内涵，而诸位如果对散束线的世界感兴趣，请绝对务必用诸位的民族语言去翻译，也就是意译，这将会极大彰显散束线的理念。”;
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“不过有一点值得注意，当要翻译散束线的作品时，要根据该作品的见述者所属的民族来翻译，比如我们的厝述平潵，翻译成英文就要用音译，比如Cuoshu或Tsuoshu，而一位用英语进行见述的作品翻译成中文就要用英文的音译。”;
+Kzcserin:“最后，在如此开放自由的一条街道，大家就必须注意我们的爱不要被某些别有用心人欺骗利用。|这一点，目前只能靠大家自己了！”;
+bgm: -enter=2400 -next;
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“例如没有什么成果只是画了大饼的众筹，用低质量的产品去销售感情或情怀，虽然人们的确有这种需要...甚至是打电话告诉你「你好，我是厝述，我现在被平潵抓起来了，我家典伺还等着我回去煮方便面，现在只需要你v我200，我就能反推平散，回去煮泡面并分你一半，然后就可以帮你拯救世界！」...拯救世界哪有这么轻松？！”;
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“....”;
+Kzcserin:“差不多就这些了？”;
+bgm:青春のステージ (Stage of Youth).mp3 -enter=2400 -next;
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1} -next;
+Kzcserin:“不对，还有一点！我们的slogan！”;
+changeFigure:kzcs/kf/kf-close.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“3！”;
+changeFigure:kzcs/kp/kp-n.png -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1} -next;
+Kzcserin:“2！”;
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1} -next;
+Kzcserin:“0！”;
+changeFigure:kzcs/kp/kp-close.png -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1} -next;
+changeFigure:kzcs/kf/kf-close.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“欸？！”“啊？”;
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1} -next;
+Kzcserin:“见述散束线！”;
+bgm: -enter=8000 -next;
+changeFigure:色图/black.png -id=black -zIndex=20;
+Kzcserin:“还有最后一句话，厝述和平潵，目前的名字，是我们为了我们的中线埋下的伏笔，真正的名字是「错束」和「平散」。不必和我用一样的。”;kc
+changeFigure: -id=black;
+changeFigure:kzcs/kf/kf-n.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“我也有一句话。”;kf
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“什么，难道？”;kc
+changeFigure:kzcs/kf/kf-close.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“没错，就是你想的，我也要退出了。”;kf
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“什么！你居然还不习惯上镜？！”;kc
+changeFigure:kzcs/kp/kp-n.png -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“...”;kp
+bgm:与你之祀-温馨一些.mp3 -enter=2400 -next;
+changeFigure:kzcs/kc/kc-r.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“啊，原来是退出啊~”;kc
+changeFigure:kzcs/kc/kc-h.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“嗯，我知道了，看来又要离开一人了。” -fontSize=default;
+changeFigure:kzcs/kf/kf-close.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“哈哈哈，我不是随意就站在门旁边的！最后！加油吧！”;kf
+changeFigure:kzcs/kc/kc-dz.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“「加油吧」...你是指槛芒的真正形态，中线的各种美术资源，还有这部作品后续制作中的cg和新的关键人物的立绘？”;
+changeFigure:kzcs/kf/kf-n.png -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+Kzcserin:“是的！加油吧！”;
+changeFigure:kzcs/kc/kc-t.png -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+Kzcserin:“...那我...”;
+changeFigure:色图/black.png -id=black;
+Kzcserin:“只能努力了！” -zIndex=20;
+
+changeFigure: -id=kf -transform={"position":{"x":-800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure: -id=kc -transform={"position":{"y":400},"scale":{"x":1.5,"y":1.5},"alpha":1};
+changeFigure: -id=kp -transform={"position":{"x":800,"y":400},"scale":{"x":1.5,"y":1.5}} -next;
+changeFigure: -id=black;
+changeBg:完结点.png ;
+Kzcserin:“结束了？总感觉还有许多话没说完？”;
+Kzcserin:“对啊，比如这篇文章，《一个只在幼儿园学过不到一年绘画的画师如何使用AI绘画梦想重燃进行创作并在当下绕过最敏感的问题》。”;
+Kzcserin:“我写的。标题不是我写的，是某人。” -fontSize=default;
+Kzcserin:“然后是这个《作为这个世界上一位即将面对人人都更有机会可以进行真正自由的电子游戏创作的艺术时代的一位超绝可爱的兽耳女仆制作人》。”;
+Kzcserin:“啊啊，这个是我的。别看标题和散束线没关系，其实一开头就会讲散束线独特的标题命名规则和一些独特的设定！”;
+Kzcserin:“最后是《关于<魅魔gal>的编剧》。我写的。”;
+;Kzcserin:“主编剧的标题我可不敢改！” -fontSize=default;
+Kzcserin:“那就...期待和可爱的大家们的再次见面~”;
+choose:重新体验真结局:重新体验真结局|重新攻略她们仨顺便消除坏结局记录:重新攻略她们仨|保持不变，兽耳女仆最棒了:我们是好朋友！;
+label:重新体验真的结局;
+setVar:jm=6 -when=jm==7 -global;
+setVar:jsz=0 -global;
+end;
+label:重新攻略她们仨;
+;setVar:jm=0 -when=jm==7 -global;
+setVar:FirstPlay=2 -global;
+setVar:jm=0 -global;
+setVar:BADEND=0 -global;
+setVar:Gps=0 -global;
+setVar:Bps=0 -global;
+setVar:Gdc=0 -global;
+setVar:Bdc=0 -global;
+setVar:Gcs=0 -global;
+setVar:Bcs=0 -global;
+setVar:jsz=0 -global;
+Kzcserin:"主人大人！没问题喵！";
+;Kzcserin:“话说我们为什么要在茶馆讨论这件事？”;
+;Kzcserin:“欸？难道要在集装箱？还是群聊？”;
+end;
+
+label:我们是好朋友！;
+:“哇啊~谢谢！你也很棒！”;
+end;

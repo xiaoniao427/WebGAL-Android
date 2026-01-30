@@ -1,0 +1,41 @@
+[
+	{
+		"positon":
+		{"x":,
+		"y":400},
+		"duration":600
+
+	},
+	{
+		"positon":
+		{"x":,
+		"y":100},
+		"duration":600
+
+	},
+	{
+		"positon":
+		{"x":,
+		"y":100},
+		"duration":1200
+
+	},
+	//左右晃动
+	{
+		{
+		"positon":
+		{"x":,
+		"y":420},
+		"duration":300
+
+	},
+	{
+		{
+		"positon":
+		{"x":,
+		"y":400},
+		"duration":60
+
+	}
+
+]

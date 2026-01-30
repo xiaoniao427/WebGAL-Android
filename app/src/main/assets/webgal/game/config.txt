@@ -1,0 +1,10 @@
+Game_name:散束线的玩魅魔galgame的玩家都有魅魔陪着不是很正常的事情吗;
+Game_key:dda067a0558bd72;
+Title_img:标题/进来玩游戏.png;
+Title_bgm:空无的未开辟-一点空无感.mp3;
+Textbox_theme:imss;
+Description:一天夜里，你看见你的魅魔□□在玩一个游戏，你心里很明白，那是个galgame，你心里非常明白，你自己是个深藏不露的galgame高手！但你不愿让她明白你是位能够一边让嘴角微微上扬一边能使自己眼镜反光发出“呼呼呼”声的galgame玩家！不过！你的内心最终还是无法抑制内心对galgame的爱！ 于是呀，故事就开始了...... 那么，你是否能陪她玩完「整个」游戏呢？;
+Package_name:RLRbetweenDLD.SuccubusGAL.simple;
+Game_Logo:标题/进来玩游戏标题.png;
+Enable_Appreciation:true;
+Default_Language:zh_CN;
