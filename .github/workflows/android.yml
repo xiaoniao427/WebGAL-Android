@@ -17,6 +17,12 @@ on:
         - template
         - both
 
+# 添加权限设置，允许创建 Releases
+permissions:
+  contents: write  # 允许创建 Releases
+  actions: read
+  checks: read
+
 jobs:
   build-debug-apk:
     runs-on: ubuntu-latest
@@ -84,6 +90,13 @@ jobs:
       always() && 
       (needs.build-debug-apk.result == 'success' || needs.build-template-apk.result == 'success') &&
       (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    # 为 release 作业单独设置更高权限
+    permissions:
+      contents: write  # 允许创建 Releases
+      packages: write
+      attestations: write
+      actions: read
+      checks: read
     steps:
     - uses: actions/checkout@v4
     - name: Download artifact
@@ -103,6 +116,7 @@ jobs:
         tag_name: ${{ steps.create_tag.outputs.TAG_NAME }}
         draft: false
         prerelease: false
+        generate_release_notes: true  # 自动生成发布说明
         files: |
           artifacts/webgal-debug.apk
           artifacts/webgal-template.apk
