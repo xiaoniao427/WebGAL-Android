@@ -22,3 +22,4 @@ A simple template for packaging WebGAL games to Android platform
 
 [https://docs.openwebgal.com/publish/android](https://docs.openwebgal.com/publish/android)
 
+# WebGAL-Android
